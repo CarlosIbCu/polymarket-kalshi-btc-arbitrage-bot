@@ -4,6 +4,12 @@ BlockRun AI Analyzer for Polymarket-Kalshi Arbitrage Bot
 Provides AI-powered analysis of arbitrage opportunities using BlockRun's
 x402 micropayment-enabled LLM gateway. No API keys required - pay with USDC.
 
+Payment: USDC on Base network only. Ensure your wallet has USDC on Base.
+
+Security: Your private key NEVER leaves your machine. It is only used locally
+to sign EIP-712 payment authorizations. Only the signature is transmitted -
+BlockRun never sees your private key.
+
 Learn more: https://blockrun.ai
 
 Installation:
