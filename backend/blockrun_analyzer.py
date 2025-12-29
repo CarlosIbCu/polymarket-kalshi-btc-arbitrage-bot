@@ -5,12 +5,16 @@ Provides AI-powered analysis of arbitrage opportunities using BlockRun's
 x402 micropayment-enabled LLM gateway. No API keys required - pay with USDC.
 
 Learn more: https://blockrun.ai
+
+Installation:
+    pip install blockrun-llm
 """
 
 import os
-import json
 from typing import Optional
-import requests
+
+from blockrun_llm import LLMClient
+from blockrun_llm.types import APIError, PaymentError
 
 
 # BlockRun model mappings
@@ -24,10 +28,19 @@ BLOCKRUN_MODELS = {
 
 DEFAULT_MODEL = "gpt-4o-mini"
 
+# Cached client instance
+_client: Optional[LLMClient] = None
 
-def get_blockrun_base_url() -> str:
-    """Get BlockRun API URL from environment or default."""
-    return os.getenv("BLOCKRUN_API_URL", "https://api.blockrun.ai/v1")
+
+def _get_client() -> LLMClient:
+    """Get or create BlockRun client instance."""
+    global _client
+    if _client is None:
+        _client = LLMClient(
+            private_key=os.getenv("BLOCKRUN_WALLET_KEY"),
+            api_url=os.getenv("BLOCKRUN_API_URL", "https://blockrun.ai/api"),
+        )
+    return _client
 
 
 def is_blockrun_enabled() -> bool:
@@ -61,70 +74,50 @@ def analyze_arbitrage_opportunity(
     # Build analysis prompt
     prompt = _build_analysis_prompt(poly_data, kalshi_data, opportunities)
 
+    system_prompt = (
+        "You are an expert quantitative analyst specializing in "
+        "prediction market arbitrage. Analyze the given market data "
+        "and arbitrage opportunities. Provide concise, actionable insights. "
+        "Focus on: execution risk, liquidity concerns, timing, and "
+        "whether the opportunity is worth pursuing. Be direct and practical."
+    )
+
     try:
-        response = requests.post(
-            f"{get_blockrun_base_url()}/chat/completions",
-            headers={
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": blockrun_model,
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": (
-                            "You are an expert quantitative analyst specializing in "
-                            "prediction market arbitrage. Analyze the given market data "
-                            "and arbitrage opportunities. Provide concise, actionable insights. "
-                            "Focus on: execution risk, liquidity concerns, timing, and "
-                            "whether the opportunity is worth pursuing. Be direct and practical."
-                        )
-                    },
-                    {
-                        "role": "user",
-                        "content": prompt
-                    }
-                ],
-                "max_tokens": 500,
-                "temperature": 0.3
-            },
-            timeout=30
+        client = _get_client()
+        analysis_text = client.chat(
+            model=blockrun_model,
+            prompt=prompt,
+            system=system_prompt,
+            max_tokens=500,
+            temperature=0.3,
         )
-
-        if response.status_code == 402:
-            # x402 payment required - need wallet integration
-            return {
-                "status": "payment_required",
-                "message": "BlockRun requires USDC payment. Ensure wallet is funded.",
-                "details": response.json() if response.text else None
-            }
-
-        response.raise_for_status()
-        result = response.json()
-
-        analysis_text = result.get("choices", [{}])[0].get("message", {}).get("content", "")
 
         return {
             "status": "success",
             "model": blockrun_model,
             "analysis": analysis_text,
-            "usage": result.get("usage", {})
         }
 
-    except requests.exceptions.Timeout:
+    except PaymentError as e:
         return {
-            "status": "error",
-            "message": "BlockRun request timed out"
+            "status": "payment_error",
+            "message": f"Payment failed: {str(e)}. Ensure wallet has sufficient USDC balance.",
         }
-    except requests.exceptions.RequestException as e:
+    except APIError as e:
         return {
             "status": "error",
-            "message": f"BlockRun request failed: {str(e)}"
+            "message": f"BlockRun API error: {str(e)}",
+        }
+    except ValueError as e:
+        # Missing private key or invalid config
+        return {
+            "status": "config_error",
+            "message": f"Configuration error: {str(e)}. Set BLOCKRUN_WALLET_KEY env var.",
         }
     except Exception as e:
         return {
             "status": "error",
-            "message": f"Analysis failed: {str(e)}"
+            "message": f"Analysis failed: {str(e)}",
         }
 
 
@@ -186,38 +179,22 @@ def get_market_sentiment(model: str = DEFAULT_MODEL) -> Optional[dict]:
     blockrun_model = BLOCKRUN_MODELS.get(model, f"openai/{model}")
 
     try:
-        response = requests.post(
-            f"{get_blockrun_base_url()}/chat/completions",
-            headers={"Content-Type": "application/json"},
-            json={
-                "model": blockrun_model,
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": "You are a crypto market analyst. Provide very brief BTC sentiment."
-                    },
-                    {
-                        "role": "user",
-                        "content": "What's the current BTC market sentiment for the next hour? One sentence only."
-                    }
-                ],
-                "max_tokens": 100,
-                "temperature": 0.5
-            },
-            timeout=15
+        client = _get_client()
+        sentiment = client.chat(
+            model=blockrun_model,
+            prompt="What's the current BTC market sentiment for the next hour? One sentence only.",
+            system="You are a crypto market analyst. Provide very brief BTC sentiment.",
+            max_tokens=100,
+            temperature=0.5,
         )
-
-        if response.status_code == 402:
-            return {"status": "payment_required"}
-
-        response.raise_for_status()
-        result = response.json()
 
         return {
             "status": "success",
-            "sentiment": result.get("choices", [{}])[0].get("message", {}).get("content", "")
+            "sentiment": sentiment,
         }
 
+    except PaymentError:
+        return {"status": "payment_error", "message": "Insufficient USDC balance"}
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
