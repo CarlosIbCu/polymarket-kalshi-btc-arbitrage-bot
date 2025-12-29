@@ -1,10 +1,19 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fetch_current_polymarket import fetch_polymarket_data_struct
 from fetch_current_kalshi import fetch_kalshi_data_struct
+from blockrun_analyzer import (
+    analyze_arbitrage_opportunity,
+    get_market_sentiment,
+    list_available_models,
+    is_blockrun_enabled,
+)
 import datetime
 
-app = FastAPI()
+app = FastAPI(
+    title="Polymarket-Kalshi Arbitrage API",
+    description="Real-time arbitrage detection with optional AI analysis via BlockRun",
+)
 
 # Enable CORS for frontend
 app.add_middleware(
@@ -16,7 +25,10 @@ app.add_middleware(
 )
 
 @app.get("/arbitrage")
-def get_arbitrage_data():
+def get_arbitrage_data(
+    include_ai: bool = Query(False, description="Include AI analysis via BlockRun"),
+    model: str = Query("gpt-4o-mini", description="AI model to use for analysis"),
+):
     # Fetch Data
     poly_data, poly_err = fetch_polymarket_data_struct()
     kalshi_data, kalshi_err = fetch_kalshi_data_struct()
@@ -27,7 +39,9 @@ def get_arbitrage_data():
         "kalshi": kalshi_data,
         "checks": [],
         "opportunities": [],
-        "errors": []
+        "errors": [],
+        "ai_analysis": None,
+        "ai_enabled": is_blockrun_enabled(),
     }
     
     if poly_err:
@@ -143,8 +157,92 @@ def get_arbitrage_data():
             response["opportunities"].append(check_data)
             
         response["checks"].append(check_data)
-        
+
+    # Add AI analysis if requested
+    if include_ai and is_blockrun_enabled():
+        response["ai_analysis"] = analyze_arbitrage_opportunity(
+            poly_data, kalshi_data, response["opportunities"], model
+        )
+
     return response
+
+
+@app.get("/ai/analyze")
+def analyze_current_opportunities(
+    model: str = Query("gpt-4o-mini", description="AI model to use"),
+):
+    """
+    Get AI analysis of current arbitrage opportunities using BlockRun.
+
+    Requires BLOCKRUN_ENABLED=true in environment.
+    Your wallet pays for LLM calls with USDC via x402 protocol.
+    """
+    if not is_blockrun_enabled():
+        return {
+            "status": "disabled",
+            "message": "Set BLOCKRUN_ENABLED=true to enable AI analysis",
+            "docs": "https://blockrun.ai",
+        }
+
+    # Fetch current data
+    poly_data, _ = fetch_polymarket_data_struct()
+    kalshi_data, _ = fetch_kalshi_data_struct()
+
+    # Get opportunities (simplified check)
+    opportunities = []
+    if poly_data and kalshi_data:
+        poly_strike = poly_data.get('price_to_beat', 0)
+        poly_up = poly_data.get('prices', {}).get('Up', 0)
+        poly_down = poly_data.get('prices', {}).get('Down', 0)
+
+        for km in kalshi_data.get('markets', [])[:5]:
+            kalshi_strike = km['strike']
+            kalshi_yes = km['yes_ask'] / 100.0
+            kalshi_no = km['no_ask'] / 100.0
+
+            if poly_strike > kalshi_strike:
+                total = poly_down + kalshi_yes
+                if total < 1.0:
+                    opportunities.append({
+                        "type": "Poly > Kalshi",
+                        "poly_leg": "Down", "kalshi_leg": "Yes",
+                        "poly_cost": poly_down, "kalshi_cost": kalshi_yes,
+                        "total_cost": total, "margin": 1.0 - total
+                    })
+            elif poly_strike < kalshi_strike:
+                total = poly_up + kalshi_no
+                if total < 1.0:
+                    opportunities.append({
+                        "type": "Poly < Kalshi",
+                        "poly_leg": "Up", "kalshi_leg": "No",
+                        "poly_cost": poly_up, "kalshi_cost": kalshi_no,
+                        "total_cost": total, "margin": 1.0 - total
+                    })
+
+    return analyze_arbitrage_opportunity(poly_data, kalshi_data, opportunities, model)
+
+
+@app.get("/ai/sentiment")
+def get_btc_sentiment(
+    model: str = Query("gpt-4o-mini", description="AI model to use"),
+):
+    """Get AI-powered BTC market sentiment analysis."""
+    if not is_blockrun_enabled():
+        return {
+            "status": "disabled",
+            "message": "Set BLOCKRUN_ENABLED=true to enable AI analysis",
+        }
+    return get_market_sentiment(model)
+
+
+@app.get("/ai/models")
+def get_available_models():
+    """List available AI models via BlockRun."""
+    return {
+        "enabled": is_blockrun_enabled(),
+        "models": list_available_models(),
+        "docs": "https://blockrun.ai",
+    }
 
 if __name__ == "__main__":
     import uvicorn

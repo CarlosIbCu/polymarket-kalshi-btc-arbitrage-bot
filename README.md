@@ -24,6 +24,7 @@ This project includes:
 -   **Real-Time Monitoring**: Fetches live prices every second.
 -   **Smart Matching**: Automatically matches Polymarket events with their corresponding Kalshi markets.
 -   **Arbitrage Detection**: Instantly identifies "risk-free" trades where the total cost < $1.00.
+-   **AI-Powered Analysis** (via BlockRun): Get intelligent risk assessment, liquidity analysis, and trade recommendations using GPT-5, Claude, Gemini, and more. Pay with USDC micropayments - no API keys needed.
 -   **Visual Dashboard**:
     -   **Live Updates**: See prices change in real-time.
     -   **Best Opportunity Highlight**: Prominently displays the most profitable trade.
@@ -34,6 +35,54 @@ This project includes:
 
 -   **Backend**: Python, FastAPI, Uvicorn, Requests
 -   **Frontend**: TypeScript, Next.js, Tailwind CSS, shadcn/ui, Lucide React
+
+## 🤖 AI-Powered Analysis (Optional)
+
+This bot supports **AI-powered arbitrage analysis** via [BlockRun](https://blockrun.ai). Get intelligent insights on:
+- Risk assessment for detected opportunities
+- Liquidity analysis and execution feasibility
+- Market sentiment and timing recommendations
+
+### How It Works
+
+BlockRun enables AI agents to access 31+ LLMs (GPT-5, GPT-4o, Claude, Gemini) via **x402 USDC micropayments** on Base. No API keys required - your wallet pays directly for LLM calls.
+
+### Enable AI Analysis
+
+1. Set environment variables:
+```bash
+export BLOCKRUN_ENABLED=true
+export BLOCKRUN_API_URL="https://api.blockrun.ai/v1"
+```
+
+2. Ensure your wallet has USDC on Base network
+
+3. Use the AI endpoints:
+```bash
+# Get AI analysis of current opportunities
+curl "http://localhost:8000/ai/analyze"
+
+# Get BTC market sentiment
+curl "http://localhost:8000/ai/sentiment"
+
+# Include AI analysis in main arbitrage endpoint
+curl "http://localhost:8000/arbitrage?include_ai=true"
+
+# Use a specific model (default: gpt-4o-mini)
+curl "http://localhost:8000/ai/analyze?model=claude-3-5-sonnet"
+```
+
+### Available AI Models
+
+| Provider | Models |
+|----------|--------|
+| OpenAI | gpt-5, gpt-4o, gpt-4o-mini |
+| Anthropic | claude-3-5-sonnet |
+| Google | gemini-2.0-flash |
+
+Learn more at [blockrun.ai](https://blockrun.ai)
+
+---
 
 ## 📦 Installation
 
