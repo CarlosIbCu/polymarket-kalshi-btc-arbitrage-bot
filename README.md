@@ -52,10 +52,13 @@ BlockRun enables AI agents to access 31+ LLMs (GPT-5, GPT-4o, Claude, Gemini) vi
 1. Set environment variables:
 ```bash
 export BLOCKRUN_ENABLED=true
-export BLOCKRUN_API_URL="https://api.blockrun.ai/v1"
+export BLOCKRUN_WALLET_KEY="your-wallet-private-key"  # Used locally for signing only
+export BLOCKRUN_API_URL="https://blockrun.ai/api"
 ```
 
-2. Ensure your wallet has USDC on Base network
+2. Ensure your wallet has USDC on Base network (chain ID 8453)
+
+**Security Note**: Your private key NEVER leaves your machine. It's only used locally to sign EIP-712 payment authorizations. Only the signature is transmitted.
 
 3. Use the AI endpoints:
 ```bash
