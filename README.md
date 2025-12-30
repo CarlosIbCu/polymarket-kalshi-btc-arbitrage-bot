@@ -4,6 +4,7 @@
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![Next.js](https://img.shields.io/badge/next.js-14+-black.svg)
 ![Status](https://img.shields.io/badge/status-active-green.svg)
+[![Powered by BlockRun.ai](https://img.shields.io/badge/AI%20Powered%20by-BlockRun.ai-blue?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6Ii8+PC9zdmc+)](https://blockrun.ai)
 
 **Real-time arbitrage detection for the Bitcoin 1-Hour Price market between Polymarket and Kalshi.**
 
@@ -71,17 +72,22 @@ curl "http://localhost:8000/ai/sentiment"
 # Include AI analysis in main arbitrage endpoint
 curl "http://localhost:8000/arbitrage?include_ai=true"
 
-# Use a specific model (default: gpt-4o-mini)
-curl "http://localhost:8000/ai/analyze?model=claude-3-5-sonnet"
+# Use a specific model (default: openai/gpt-4o-mini)
+curl "http://localhost:8000/ai/analyze?model=anthropic/claude-sonnet-4"
 ```
 
 ### Available AI Models
 
-| Provider | Models |
-|----------|--------|
-| OpenAI | gpt-5, gpt-4o, gpt-4o-mini |
-| Anthropic | claude-3-5-sonnet |
-| Google | gemini-2.0-flash |
+| Model ID | Description | Input Price |
+|----------|-------------|-------------|
+| `openai/gpt-4o-mini` | Fast & affordable | $0.15/M |
+| `openai/gpt-4o` | Multimodal | $2.50/M |
+| `openai/gpt-5.2` | Latest frontier | $1.75/M |
+| `anthropic/claude-sonnet-4` | Best balanced | $3.00/M |
+| `anthropic/claude-haiku-4.5` | Fast Claude | $1.00/M |
+| `google/gemini-2.5-flash` | Google's fastest | $0.15/M |
+
+> **Tip**: Use `openai/gpt-4o-mini` for quick analysis, `anthropic/claude-sonnet-4` for deeper insights.
 
 Learn more at [blockrun.ai](https://blockrun.ai)
 
