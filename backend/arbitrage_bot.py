@@ -2,8 +2,9 @@ import time
 import datetime
 from fetch_current_polymarket import fetch_polymarket_data_struct
 from fetch_current_kalshi import fetch_kalshi_data_struct
+from executor import TradeExecutor
 
-def check_arbitrage():
+def check_arbitrage(executor):
     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] Scanning for arbitrage...")
     
     # Fetch Data
@@ -17,14 +18,32 @@ def check_arbitrage():
         print(f"Kalshi Error: {kalshi_err}")
         return
         
-    if not poly_data or not kalshi_data:
+    if not poly_data: # or not kalshi_data:
         print("Missing data.")
+        return
+
+    if not kalshi_data:
+        print("Missing Kalshi data.")
         return
 
     # Polymarket Data
     poly_strike = poly_data['price_to_beat']
+    
+    # SAFETY CHECK
+    if poly_strike is None or poly_strike <= 1000:
+        print(f"⚠️  Polymarket Strike Invalid ({poly_strike}). Skipping Arb Check.")
+        print(f"    (Market: {poly_data.get('question')})")
+        return
+        
     poly_up_cost = poly_data['prices'].get('Up', 0.0)
     poly_down_cost = poly_data['prices'].get('Down', 0.0)
+
+
+
+    # We need the specific Asset IDs to trade
+    poly_up_id = poly_data.get('up_token_id') 
+    poly_down_id = poly_data.get('down_token_id')
+    # ----------------------
     
     if poly_strike is None:
         print("Polymarket Strike is None")
@@ -94,6 +113,17 @@ def check_arbitrage():
                 print(f"Total Cost: ${total_cost:.3f}")
                 print(f"Min Payout: $1.00")
                 print(f"Risk-Free Profit: ${margin:.3f} per unit")
+
+                # --- INSERT THIS ---
+                print("⚡ Triggering Trade...")
+                executor.execute_trade({
+                    'poly_token_id': poly_down_id,
+                    'poly_price': poly_down_cost,
+                    'kalshi_ticker': km.get('ticker', km.get('market_ticker')),
+                    'kalshi_price': kalshi_yes_cost,
+                    'kalshi_side': 'yes'
+                })
+                # -------------------
                 found_arb = True
 
         # Case 2: Poly_Strike < Kalshi_Strike
@@ -109,6 +139,17 @@ def check_arbitrage():
                 print(f"Total Cost: ${total_cost:.3f}")
                 print(f"Min Payout: $1.00")
                 print(f"Risk-Free Profit: ${margin:.3f} per unit")
+
+                # --- INSERT THIS ---
+                print("⚡ Triggering Trade...")
+                executor.execute_trade({
+                    'poly_token_id': poly_up_id,
+                    'poly_price': poly_up_cost,
+                    'kalshi_ticker': km.get('ticker', km.get('market_ticker')),
+                    'kalshi_price': kalshi_no_cost,
+                    'kalshi_side': 'no'
+                })
+                # -------------------
                 found_arb = True
                 
         # Case 3: Poly_Strike == Kalshi_Strike
@@ -124,6 +165,16 @@ def check_arbitrage():
                 print(f"Strategy: Buy Poly DOWN + Kalshi YES")
                 print(f"Total Cost: ${cost1:.3f}")
                 print(f"Risk-Free Profit: ${margin:.3f} per unit")
+                 # --- INSERT THIS ---
+                print("⚡ Triggering Trade...")
+                executor.execute_trade({
+                    'poly_token_id': poly_down_id,
+                    'poly_price': poly_down_cost,
+                    'kalshi_ticker': km.get('ticker', km.get('market_ticker')),
+                    'kalshi_price': kalshi_yes_cost,
+                    'kalshi_side': 'yes'
+                })
+                # -------------------
                 found_arb = True
                 
             # Check Pair 2: Poly Up + Kalshi No
@@ -137,6 +188,16 @@ def check_arbitrage():
                 print(f"Strategy: Buy Poly UP + Kalshi NO")
                 print(f"Total Cost: ${cost2:.3f}")
                 print(f"Risk-Free Profit: ${margin:.3f} per unit")
+                # --- INSERT THIS ---
+                print("⚡ Triggering Trade...")
+                executor.execute_trade({
+                    'poly_token_id': poly_up_id,
+                    'poly_price': poly_up_cost,
+                    'kalshi_ticker': km.get('ticker', km.get('market_ticker')),
+                    'kalshi_price': kalshi_no_cost,
+                    'kalshi_side': 'no'
+                })
+                # -------------------
                 found_arb = True
 
     if not found_arb:
@@ -146,9 +207,41 @@ def check_arbitrage():
 def main():
     print("Starting Arbitrage Bot...")
     print("Press Ctrl+C to stop.")
+    # 1. Initialize Executor
+    print("\n--- 🔌 INITIALIZING TRADER ---")
+    try:
+        executor = TradeExecutor()
+        executor.login_kalshi() 
+    except Exception as e:
+        print(f"❌ CRITICAL ERROR: Could not start executor: {e}")
+        return
+
+    # 2. STATUS CHECK (Diagnose the "Not Ready" error)
+    print("\n--- 🔍 CONNECTION STATUS ---")
+    
+    # Check Polymarket
+    if executor.is_ready_poly:
+        print("✅ Polymarket: CONNECTED")
+    else:
+        print("❌ Polymarket: FAILED")
+        print("   (Reason: Check the '⚠️ Executor Warning' logs above)")
+
+    # Check Kalshi
+    if executor.is_ready_kalshi:
+        print("✅ Kalshi: CONNECTED")
+    else:
+        print("❌ Kalshi: FAILED")
+        print("   (Reason: Check the 'Kalshi Key Error' logs above)")
+
+    if not executor.is_ready:
+        print("\n⚠️  WARNING: The bot will SCAN, but it CANNOT TRADE.")
+        print("   Fix the failed connection in .env to enable trading.")
+    else:
+        print("\n🚀 SYSTEM READY: Auto-Trading is ACTIVE.")
+    print("----------------------------\n")
     while True:
         try:
-            check_arbitrage()
+            check_arbitrage(executor)
             time.sleep(1)
         except KeyboardInterrupt:
             print("\nStopping...")
@@ -156,6 +249,8 @@ def main():
         except Exception as e:
             print(f"Error: {e}")
             time.sleep(1)
+
+
 
 if __name__ == "__main__":
     main()
