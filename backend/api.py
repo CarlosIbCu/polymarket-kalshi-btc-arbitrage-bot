@@ -1,150 +1,177 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fetch_current_polymarket import fetch_polymarket_data_struct
-from fetch_current_kalshi import fetch_kalshi_data_struct
+from fetch_polymarket import fetch_polymarket_soccer_events
+from fetch_kalshi import fetch_kalshi_soccer_events
+from match_markets import match_markets
+from leagues import LEAGUES
 import datetime
 
 app = FastAPI()
 
-# Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Allow all for dev
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+
+def check_arbitrage_for_pair(pair):
+    """
+    Run arbitrage checks on a matched pair of markets.
+    For each outcome (Home/Draw/Away), check both directions:
+      1. Buy outcome on Poly (ask) + Buy NO on Kalshi (no_ask) < $1.00
+      2. Buy outcome on Kalshi (yes_ask) + Sell on Poly (1 - bid) < $1.00
+    """
+    poly = pair["polymarket"]
+    kalshi = pair["kalshi"]
+    poly_outcomes = poly.get("outcomes", {})
+    kalshi_outcomes = kalshi.get("outcomes", {})
+
+    checks = []
+
+    # Map Polymarket outcomes to Kalshi outcomes
+    # Polymarket: "Home Team", "Draw", "Away Team" (or similar)
+    # Kalshi: separate markets per outcome
+    #
+    # We need to align them. Both platforms should have ~3 outcomes for a match.
+    # We'll try to match by outcome name similarity.
+    outcome_pairs = _align_outcomes(poly_outcomes, kalshi_outcomes)
+
+    for outcome_name, poly_prices, kalshi_prices in outcome_pairs:
+        poly_ask = poly_prices.get("ask", 0)
+        poly_bid = poly_prices.get("bid", 0)
+        kalshi_yes_ask = kalshi_prices.get("yes_ask", 0)
+        kalshi_no_ask = kalshi_prices.get("no_ask", 0)
+
+        # Direction 1: Buy on Polymarket + Buy NO on Kalshi
+        if poly_ask > 0 and kalshi_no_ask > 0:
+            total = poly_ask + kalshi_no_ask
+            check = {
+                "outcome": outcome_name,
+                "direction": "Poly YES + Kalshi NO",
+                "poly_cost": poly_ask,
+                "kalshi_cost": kalshi_no_ask,
+                "total_cost": total,
+                "is_arbitrage": total < 1.00,
+                "margin": max(0, 1.00 - total),
+            }
+            checks.append(check)
+
+        # Direction 2: Buy on Kalshi + Sell on Polymarket
+        if kalshi_yes_ask > 0 and poly_bid > 0:
+            poly_sell_cost = 1.0 - poly_bid  # cost to be short on Poly
+            total = kalshi_yes_ask + poly_sell_cost
+            check = {
+                "outcome": outcome_name,
+                "direction": "Kalshi YES + Poly NO",
+                "poly_cost": poly_sell_cost,
+                "kalshi_cost": kalshi_yes_ask,
+                "total_cost": total,
+                "is_arbitrage": total < 1.00,
+                "margin": max(0, 1.00 - total),
+            }
+            checks.append(check)
+
+    return checks
+
+
+def _align_outcomes(poly_outcomes, kalshi_outcomes):
+    """
+    Align Polymarket and Kalshi outcomes by name.
+    Returns list of (outcome_name, poly_prices, kalshi_prices) tuples.
+    """
+    from match_markets import similarity
+
+    aligned = []
+    used_kalshi = set()
+
+    for poly_name, poly_prices in poly_outcomes.items():
+        best_match = None
+        best_score = 0
+
+        for kalshi_name, kalshi_prices in kalshi_outcomes.items():
+            if kalshi_name in used_kalshi:
+                continue
+
+            # Check name similarity
+            score = similarity(poly_name.lower(), kalshi_name.lower())
+
+            # Boost score for exact keyword matches
+            if "draw" in poly_name.lower() and "draw" in kalshi_name.lower():
+                score = max(score, 0.95)
+
+            if score > best_score:
+                best_score = score
+                best_match = (kalshi_name, kalshi_prices)
+
+        if best_match and best_score > 0.4:
+            used_kalshi.add(best_match[0])
+            aligned.append((poly_name, poly_prices, best_match[1]))
+
+    return aligned
+
+
 @app.get("/arbitrage")
-def get_arbitrage_data():
-    # Fetch Data
-    poly_data, poly_err = fetch_polymarket_data_struct()
-    kalshi_data, kalshi_err = fetch_kalshi_data_struct()
-    
-    response = {
-        "timestamp": datetime.datetime.now().isoformat(),
-        "polymarket": poly_data,
-        "kalshi": kalshi_data,
-        "checks": [],
-        "opportunities": [],
-        "errors": []
-    }
-    
-    if poly_err:
-        response["errors"].append(poly_err)
-    if kalshi_err:
-        response["errors"].append(kalshi_err)
-        
-    if not poly_data or not kalshi_data:
-        return response
+def get_arbitrage_data(league: str = Query(default=None)):
+    """
+    Fetch all soccer markets, match them, and run arbitrage checks.
+    Optional league filter (e.g., ?league=epl).
+    """
+    poly_matches, poly_errors = fetch_polymarket_soccer_events(league)
+    kalshi_matches, kalshi_errors = fetch_kalshi_soccer_events(league)
 
-    # Logic
-    poly_strike = poly_data['price_to_beat']
-    poly_up_cost = poly_data['prices'].get('Up', 0.0)
-    poly_down_cost = poly_data['prices'].get('Down', 0.0)
-    
-    if poly_strike is None:
-        response["errors"].append("Polymarket Strike is None")
-        return response
+    paired = match_markets(poly_matches, kalshi_matches)
 
-    kalshi_markets = kalshi_data.get('markets', [])
-    
-    # Ensure sorted by strike
-    kalshi_markets.sort(key=lambda x: x['strike'])
-    
-    # Find index closest to poly_strike
-    closest_idx = 0
-    min_diff = float('inf')
-    for i, m in enumerate(kalshi_markets):
-        diff = abs(m['strike'] - poly_strike)
-        if diff < min_diff:
-            min_diff = diff
-            closest_idx = i
-            
-    # Select 4 below and 4 above (approx 8-9 markets total)
-    # If closest is at index C, we want [C-4, C+5] roughly
-    start_idx = max(0, closest_idx - 4)
-    end_idx = min(len(kalshi_markets), closest_idx + 5) # +5 to include the closest and 4 above
-    
-    selected_markets = kalshi_markets[start_idx:end_idx]
-    
-    for km in selected_markets:
-        kalshi_strike = km['strike']
-        kalshi_yes_cost = km['yes_ask'] / 100.0
-        kalshi_no_cost = km['no_ask'] / 100.0
-        
-        # Only check markets within range (removed previous hardcoded range check)
-            
-        check_data = {
-            "kalshi_strike": kalshi_strike,
-            "kalshi_yes": kalshi_yes_cost,
-            "kalshi_no": kalshi_no_cost,
-            "type": "",
-            "poly_leg": "",
-            "kalshi_leg": "",
-            "poly_cost": 0,
-            "kalshi_cost": 0,
-            "total_cost": 0,
-            "is_arbitrage": False,
-            "margin": 0
+    all_checks = []
+    all_opportunities = []
+
+    for pair in paired:
+        checks = check_arbitrage_for_pair(pair)
+        match_info = {
+            "home_team": pair["home_team"],
+            "away_team": pair["away_team"],
+            "league": pair["league"],
+            "league_name": pair["league_name"],
+            "poly_slug": pair["polymarket"].get("slug", ""),
+            "kalshi_ticker": pair["kalshi"].get("event_ticker", ""),
+            "polymarket_outcomes": pair["polymarket"].get("outcomes", {}),
+            "kalshi_outcomes": {
+                k: {
+                    "yes_ask": v.get("yes_ask", 0),
+                    "no_ask": v.get("no_ask", 0),
+                    "yes_bid": v.get("yes_bid", 0),
+                    "no_bid": v.get("no_bid", 0),
+                }
+                for k, v in pair["kalshi"].get("outcomes", {}).items()
+            },
+            "checks": checks,
+            "opportunities": [c for c in checks if c["is_arbitrage"]],
         }
+        all_checks.append(match_info)
+        all_opportunities.extend(match_info["opportunities"])
 
-        if poly_strike > kalshi_strike:
-            check_data["type"] = "Poly > Kalshi"
-            check_data["poly_leg"] = "Down"
-            check_data["kalshi_leg"] = "Yes"
-            check_data["poly_cost"] = poly_down_cost
-            check_data["kalshi_cost"] = kalshi_yes_cost
-            check_data["total_cost"] = poly_down_cost + kalshi_yes_cost
-            
-        elif poly_strike < kalshi_strike:
-            check_data["type"] = "Poly < Kalshi"
-            check_data["poly_leg"] = "Up"
-            check_data["kalshi_leg"] = "No"
-            check_data["poly_cost"] = poly_up_cost
-            check_data["kalshi_cost"] = kalshi_no_cost
-            check_data["total_cost"] = poly_up_cost + kalshi_no_cost
-            
-        elif poly_strike == kalshi_strike:
-            # Check 1
-            check1 = check_data.copy()
-            check1["type"] = "Equal"
-            check1["poly_leg"] = "Down"
-            check1["kalshi_leg"] = "Yes"
-            check1["poly_cost"] = poly_down_cost
-            check1["kalshi_cost"] = kalshi_yes_cost
-            check1["total_cost"] = poly_down_cost + kalshi_yes_cost
-            
-            if check1["total_cost"] < 1.00:
-                check1["is_arbitrage"] = True
-                check1["margin"] = 1.00 - check1["total_cost"]
-                response["opportunities"].append(check1)
-            response["checks"].append(check1)
-            
-            # Check 2
-            check2 = check_data.copy()
-            check2["type"] = "Equal"
-            check2["poly_leg"] = "Up"
-            check2["kalshi_leg"] = "No"
-            check2["poly_cost"] = poly_up_cost
-            check2["kalshi_cost"] = kalshi_no_cost
-            check2["total_cost"] = poly_up_cost + kalshi_no_cost
-            
-            if check2["total_cost"] < 1.00:
-                check2["is_arbitrage"] = True
-                check2["margin"] = 1.00 - check2["total_cost"]
-                response["opportunities"].append(check2)
-            response["checks"].append(check2)
-            continue # Skip adding the base check_data
+    # Sort opportunities by margin descending
+    all_opportunities.sort(key=lambda x: x["margin"], reverse=True)
 
-        if check_data["total_cost"] < 1.00:
-            check_data["is_arbitrage"] = True
-            check_data["margin"] = 1.00 - check_data["total_cost"]
-            response["opportunities"].append(check_data)
-            
-        response["checks"].append(check_data)
-        
-    return response
+    return {
+        "timestamp": datetime.datetime.now().isoformat(),
+        "total_matches": len(paired),
+        "total_poly_events": len(poly_matches),
+        "total_kalshi_events": len(kalshi_matches),
+        "matches": all_checks,
+        "opportunities": all_opportunities,
+        "errors": poly_errors + kalshi_errors,
+        "leagues": {k: v["name"] for k, v in LEAGUES.items()},
+    }
+
+
+@app.get("/leagues")
+def get_leagues():
+    """Return list of supported leagues."""
+    return {k: v["name"] for k, v in LEAGUES.items()}
+
 
 if __name__ == "__main__":
     import uvicorn
