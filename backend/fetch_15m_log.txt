@@ -1,0 +1,2790 @@
+[23:17:28]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.445 / Down: 0.555
+[23:17:33]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.445 / Down: 0.565
+[23:17:37]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.435 / Down: 0.565
+[23:17:41]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.425 / Down: 0.575
+[23:17:45]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.425 / Down: 0.575
+[23:17:49]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.435 / Down: 0.565
+[23:17:54]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.410 / Down: 0.595
+[23:17:58]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.405 / Down: 0.605
+[23:18:03]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,017.99
+  Up: 0.375 / Down: 0.625
+[23:18:07]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.350 / Down: 0.650
+[23:18:11]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.345 / Down: 0.655
+[23:18:16]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.345 / Down: 0.655
+[23:18:20]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.355 / Down: 0.645
+[23:18:25]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.95
+  Up: 0.345 / Down: 0.655
+[23:18:30]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.345 / Down: 0.655
+[23:18:34]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,016.96
+  Up: 0.355 / Down: 0.645
+[23:18:39]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,009.45
+  Up: 0.335 / Down: 0.655
+[23:18:45]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,009.45
+  Up: 0.345 / Down: 0.655
+[23:18:51]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,011.41
+  Up: 0.335 / Down: 0.675
+[23:18:57]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,011.42
+  Up: 0.330 / Down: 0.675
+[23:19:03]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,011.42
+  Up: 0.345 / Down: 0.655
+[23:19:08]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,019.13
+  Up: 0.435 / Down: 0.565
+[23:19:14]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,026.98
+  Up: 0.525 / Down: 0.475
+[23:19:20]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,030.24
+  Up: 0.525 / Down: 0.475
+[23:19:27]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,027.54
+  Up: 0.465 / Down: 0.535
+[23:19:33]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,027.54
+  Up: 0.485 / Down: 0.515
+[23:19:39]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,027.54
+  Up: 0.485 / Down: 0.515
+[23:19:45]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,027.54
+  Up: 0.485 / Down: 0.515
+[23:19:51]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,027.54
+  Up: 0.475 / Down: 0.525
+[23:19:57]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,028.90
+  Up: 0.610 / Down: 0.345
+[23:20:03]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,044.73
+  Up: 0.645 / Down: 0.345
+[23:20:08]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,037.20
+  Up: 0.585 / Down: 0.415
+[23:20:14]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,037.20
+  Up: 0.650 / Down: 0.350
+[23:20:20]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,037.20
+  Up: 0.645 / Down: 0.355
+[23:20:27]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.650 / Down: 0.345
+[23:20:33]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.655 / Down: 0.345
+[23:20:38]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.645 / Down: 0.315
+[23:20:43]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.675 / Down: 0.335
+[23:20:48]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.685 / Down: 0.315
+[23:20:53]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,043.99
+  Up: 0.685 / Down: 0.305
+[23:21:01]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,047.98
+  Up: 0.715 / Down: 0.285
+[23:21:07]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,047.99
+  Up: 0.725 / Down: 0.275
+[23:21:15]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,047.99
+  Up: 0.725 / Down: 0.275
+[23:21:24]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,047.99
+  Up: 0.755 / Down: 0.245
+[23:21:32]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,054.67
+  Up: 0.785 / Down: 0.215
+[23:21:42]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,056.93
+  Up: 0.795 / Down: 0.125
+[23:21:51]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,088.42
+  Up: 0.935 / Down: 0.135
+[23:22:00]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,076.71
+  Up: 0.855 / Down: 0.145
+[23:22:08]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,076.71
+  Up: 0.845 / Down: 0.145
+[23:22:16]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,075.67
+  Up: 0.845 / Down: 0.155
+[23:22:25]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,075.67
+  Up: 0.855 / Down: 0.145
+[23:22:33]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,075.68
+  Up: 0.855 / Down: 0.145
+[23:22:42]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,082.43
+  Up: 0.885 / Down: 0.115
+[23:22:52]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,111.25
+  Up: 0.945 / Down: 0.055
+[23:23:01]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,112.59
+  Up: 0.935 / Down: 0.075
+[23:23:10]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,107.14
+  Up: 0.955 / Down: 0.045
+[23:23:19]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,107.14
+  Up: 0.945 / Down: 0.035
+[23:23:27]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,093.74
+  Up: 0.955 / Down: 0.055
+[23:23:36]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.21
+  Up: 0.925 / Down: 0.065
+[23:23:45]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.21
+  Up: 0.945 / Down: 0.055
+[23:23:54]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.20
+  Up: 0.945 / Down: 0.065
+[23:24:03]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.20
+  Up: 0.945 / Down: 0.045
+[23:24:12]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,097.51
+  Up: 0.955 / Down: 0.045
+[23:24:21]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,092.01
+  Up: 0.955 / Down: 0.045
+[23:24:30]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,092.02
+  Up: 0.955 / Down: 0.045
+[23:24:39]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,092.02
+  Up: 0.955 / Down: 0.045
+[23:24:48]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,092.02
+  Up: 0.955 / Down: 0.045
+[23:24:57]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,092.02
+  Up: 0.955 / Down: 0.045
+[23:25:07]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,088.02
+  Up: 0.975 / Down: 0.025
+[23:25:16]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,088.02
+  Up: 0.985 / Down: 0.015
+[23:25:24]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,088.01
+  Up: 0.985 / Down: 0.015
+[23:25:34]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,088.02
+  Up: 0.985 / Down: 0.015
+[23:25:43]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,080.87
+  Up: 0.985 / Down: 0.025
+[23:25:53]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.12
+  Up: 0.975 / Down: 0.025
+[23:26:02]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,086.12
+  Up: 0.975 / Down: 0.025
+[23:26:12]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,093.74
+  Up: 0.985 / Down: 0.015
+[23:26:24]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,095.87
+  Up: 0.985 / Down: 0.015
+[23:26:35]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,091.23
+  Up: 0.995 / Down: 0.005
+[23:26:44]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,091.23
+  Up: 0.995 / Down: 0.005
+[23:26:54]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,091.23
+  Up: 0.985 / Down: 0.015
+[23:27:04]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,091.23
+  Up: 0.985 / Down: 0.015
+[23:27:15]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,091.22
+  Up: 0.985 / Down: 0.015
+[23:27:24]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,081.16
+  Up: 0.985 / Down: 0.015
+[23:27:35]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,080.12
+  Up: 0.995 / Down: 0.005
+[23:27:44]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,074.90
+  Up: 0.995 / Down: 0.005
+[23:27:53]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,060.01
+  Up: 0.985 / Down: 0.015
+[23:28:03]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,063.65
+  Up: 0.985 / Down: 0.015
+[23:28:12]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,063.65
+  Up: 0.985 / Down: 0.015
+[23:28:20]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,063.65
+  Up: 0.990 / Down: 0.011
+[23:28:30]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,069.93
+  Up: 0.990 / Down: 0.017
+[23:28:39]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,069.93
+  Up: 0.980 / Down: 0.015
+[23:28:48]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,069.93
+  Up: 0.985 / Down: 0.015
+[23:28:57]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,069.93
+  Up: 0.990 / Down: 0.011
+[23:29:07]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,073.99
+  Up: 0.985 / Down: 0.015
+[23:29:17]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,074.89
+  Up: 0.999 / Down: 0.001
+[23:29:27]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,074.90
+  Up: 1.000 / Down: 0.001
+[23:29:35]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,074.90
+  Up: 0.999 / Down: 0.002
+[23:29:44]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,078.02
+  Up: 1.000 / Down: 0.001
+[23:29:54]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,076.99
+  Up: 1.000 / Down: 0.001
+[23:30:05]
+  Slug: btc-updown-15m-1771755300
+  Price to Beat: $68,026.01
+  Current Price: $68,076.99
+  Up: 1.000 / Down: 0.001
+[23:30:16]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.505 / Down: 0.495
+[23:30:25]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.495 / Down: 0.495
+[23:30:35]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.505 / Down: 0.495
+[23:30:45]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.98
+  Up: 0.505 / Down: 0.505
+[23:30:56]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.495 / Down: 0.505
+[23:31:05]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.505 / Down: 0.495
+[23:31:14]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.99
+  Up: 0.500 / Down: 0.475
+[23:31:24]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.33
+  Up: 0.565 / Down: 0.435
+[23:31:35]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.35
+  Up: 0.565 / Down: 0.435
+[23:31:44]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.35
+  Up: 0.565 / Down: 0.445
+[23:31:55]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.555 / Down: 0.445
+[23:32:04]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.545 / Down: 0.455
+[23:32:14]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.545 / Down: 0.455
+[23:32:22]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.525 / Down: 0.465
+[23:32:32]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.515 / Down: 0.495
+[23:32:40]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.515 / Down: 0.485
+[23:32:49]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.515 / Down: 0.495
+[23:32:58]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.485 / Down: 0.515
+[23:33:07]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.36
+  Up: 0.485 / Down: 0.565
+[23:33:16]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,115.51
+  Up: 0.630 / Down: 0.365
+[23:33:26]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,105.06
+  Up: 0.615 / Down: 0.385
+[23:33:35]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,088.48
+  Up: 0.525 / Down: 0.465
+[23:33:45]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,071.31
+  Up: 0.445 / Down: 0.555
+[23:33:55]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,071.32
+  Up: 0.435 / Down: 0.565
+[23:34:04]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,071.31
+  Up: 0.435 / Down: 0.565
+[23:34:13]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.03
+  Up: 0.405 / Down: 0.635
+[23:34:23]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.03
+  Up: 0.365 / Down: 0.635
+[23:34:32]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.02
+  Up: 0.395 / Down: 0.615
+[23:34:41]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.03
+  Up: 0.395 / Down: 0.605
+[23:34:50]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.03
+  Up: 0.405 / Down: 0.595
+[23:34:59]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,064.02
+  Up: 0.405 / Down: 0.655
+[23:35:08]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,057.37
+  Up: 0.345 / Down: 0.655
+[23:35:18]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,057.37
+  Up: 0.345 / Down: 0.655
+[23:35:27]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,063.84
+  Up: 0.395 / Down: 0.605
+[23:35:36]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,063.84
+  Up: 0.415 / Down: 0.585
+[23:35:45]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,066.22
+  Up: 0.415 / Down: 0.585
+[23:35:54]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,066.21
+  Up: 0.415 / Down: 0.585
+[23:36:04]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,066.22
+  Up: 0.425 / Down: 0.535
+[23:36:14]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.83
+  Up: 0.475 / Down: 0.525
+[23:36:24]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.84
+  Up: 0.475 / Down: 0.525
+[23:36:34]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.84
+  Up: 0.455 / Down: 0.555
+[23:36:43]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.84
+  Up: 0.435 / Down: 0.565
+[23:36:53]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.84
+  Up: 0.435 / Down: 0.565
+[23:37:02]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.84
+  Up: 0.435 / Down: 0.565
+[23:37:12]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,074.89
+  Up: 0.435 / Down: 0.615
+[23:37:21]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,069.43
+  Up: 0.395 / Down: 0.605
+[23:37:30]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,069.43
+  Up: 0.375 / Down: 0.645
+[23:37:39]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,069.44
+  Up: 0.375 / Down: 0.585
+[23:37:49]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.25
+  Up: 0.445 / Down: 0.555
+[23:37:58]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,076.24
+  Up: 0.445 / Down: 0.585
+[23:38:08]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.87
+  Up: 0.515 / Down: 0.435
+[23:38:18]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.19
+  Up: 0.585 / Down: 0.415
+[23:38:29]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.19
+  Up: 0.585 / Down: 0.415
+[23:38:37]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.20
+  Up: 0.585 / Down: 0.415
+[23:38:47]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.20
+  Up: 0.585 / Down: 0.405
+[23:38:56]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,089.97
+  Up: 0.655 / Down: 0.355
+[23:39:06]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,093.75
+  Up: 0.695 / Down: 0.310
+[23:39:14]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.21
+  Up: 0.645 / Down: 0.355
+[23:39:24]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.21
+  Up: 0.645 / Down: 0.355
+[23:39:34]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.20
+  Up: 0.655 / Down: 0.345
+[23:39:44]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.21
+  Up: 0.665 / Down: 0.345
+[23:39:53]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.21
+  Up: 0.655 / Down: 0.345
+[23:40:02]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,079.06
+  Up: 0.580 / Down: 0.625
+[23:40:11]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,067.35
+  Up: 0.455 / Down: 0.545
+[23:40:21]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,072.80
+  Up: 0.545 / Down: 0.455
+[23:40:30]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,073.99
+  Up: 0.555 / Down: 0.450
+[23:40:39]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,077.72
+  Up: 0.545 / Down: 0.465
+[23:40:49]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,077.73
+  Up: 0.525 / Down: 0.505
+[23:40:58]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,077.73
+  Up: 0.575 / Down: 0.395
+[23:41:07]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,086.20
+  Up: 0.625 / Down: 0.355
+[23:41:17]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.21
+  Up: 0.655 / Down: 0.345
+[23:41:26]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.22
+  Up: 0.655 / Down: 0.345
+[23:41:36]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.22
+  Up: 0.675 / Down: 0.325
+[23:41:46]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.22
+  Up: 0.665 / Down: 0.325
+[23:41:55]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.21
+  Up: 0.745 / Down: 0.255
+[23:42:05]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.22
+  Up: 0.725 / Down: 0.275
+[23:42:14]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,087.21
+  Up: 0.715 / Down: 0.295
+[23:42:23]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,085.01
+  Up: 0.695 / Down: 0.355
+[23:42:32]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,084.56
+  Up: 0.655 / Down: 0.345
+[23:42:41]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,080.47
+  Up: 0.615 / Down: 0.385
+[23:42:50]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,080.47
+  Up: 0.625 / Down: 0.375
+[23:42:59]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,080.46
+  Up: 0.635 / Down: 0.365
+[23:43:09]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,080.47
+  Up: 0.730 / Down: 0.265
+[23:43:18]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,080.47
+  Up: 0.750 / Down: 0.225
+[23:43:28]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.32
+  Up: 0.785 / Down: 0.215
+[23:43:38]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.33
+  Up: 0.795 / Down: 0.205
+[23:43:47]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,082.33
+  Up: 0.825 / Down: 0.185
+[23:43:56]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,083.35
+  Up: 0.870 / Down: 0.125
+[23:44:05]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,083.35
+  Up: 0.880 / Down: 0.115
+[23:44:15]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,083.35
+  Up: 0.895 / Down: 0.105
+[23:44:25]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,083.35
+  Up: 0.885 / Down: 0.115
+[23:44:34]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,083.35
+  Up: 0.905 / Down: 0.095
+[23:44:43]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,079.25
+  Up: 0.820 / Down: 0.210
+[23:44:52]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,078.05
+  Up: 0.850 / Down: 0.070
+[23:45:01]
+  Slug: btc-updown-15m-1771756200
+  Price to Beat: $68,076.99
+  Current Price: $68,078.05
+  Up: 0.860 / Down: 0.005
+[23:45:14]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,078.05
+  Up: 0.455 / Down: 0.535
+[23:45:24]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,085.01
+  Up: 0.485 / Down: 0.555
+[23:45:33]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,078.05
+  Up: 0.455 / Down: 0.555
+[23:45:43]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,078.05
+  Up: 0.445 / Down: 0.555
+[23:45:52]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,078.05
+  Up: 0.425 / Down: 0.575
+[23:46:02]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,078.05
+  Up: 0.435 / Down: 0.565
+[23:46:11]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,083.90
+  Up: 0.505 / Down: 0.495
+[23:46:21]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,083.90
+  Up: 0.495 / Down: 0.505
+[23:46:30]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,087.67
+  Up: 0.525 / Down: 0.475
+[23:46:40]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,097.05
+  Up: 0.575 / Down: 0.425
+[23:46:50]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,097.06
+  Up: 0.585 / Down: 0.415
+[23:47:01]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,097.50
+  Up: 0.585 / Down: 0.425
+[23:47:12]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.33
+  Up: 0.545 / Down: 0.505
+[23:47:23]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.34
+  Up: 0.515 / Down: 0.495
+[23:47:32]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.34
+  Up: 0.505 / Down: 0.485
+[23:47:42]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.33
+  Up: 0.515 / Down: 0.485
+[23:47:51]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.34
+  Up: 0.515 / Down: 0.495
+[23:48:03]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.34
+  Up: 0.515 / Down: 0.485
+[23:48:11]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,091.69
+  Up: 0.530 / Down: 0.475
+[23:48:20]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,091.69
+  Up: 0.535 / Down: 0.465
+[23:48:29]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.51
+  Up: 0.525 / Down: 0.485
+[23:48:39]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.52
+  Up: 0.525 / Down: 0.475
+[23:48:48]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.52
+  Up: 0.505 / Down: 0.445
+[23:48:57]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.52
+  Up: 0.555 / Down: 0.445
+[23:49:07]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.52
+  Up: 0.555 / Down: 0.435
+[23:49:17]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.52
+  Up: 0.565 / Down: 0.455
+[23:49:26]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.51
+  Up: 0.545 / Down: 0.455
+[23:49:35]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.51
+  Up: 0.555 / Down: 0.445
+[23:49:44]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,090.51
+  Up: 0.565 / Down: 0.405
+[23:49:54]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,091.85
+  Up: 0.595 / Down: 0.405
+[23:50:01]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,091.84
+  Up: 0.585 / Down: 0.415
+[23:50:07]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,099.37
+  Current Price: $68,104.02
+  Up: 0.685 / Down: 0.315
+[23:50:13]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.675 / Down: 0.315
+[23:50:19]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.685 / Down: 0.305
+[23:50:24]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.675 / Down: 0.335
+[23:50:30]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.01
+  Up: 0.645 / Down: 0.355
+[23:50:40]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.645 / Down: 0.355
+[23:50:50]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.665 / Down: 0.350
+[23:51:00]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.02
+  Up: 0.655 / Down: 0.335
+[23:51:12]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.01
+  Up: 0.670 / Down: 0.325
+[23:51:25]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.01
+  Up: 0.675 / Down: 0.325
+[23:51:35]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.01
+  Up: 0.625 / Down: 0.375
+[23:51:45]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,102.32
+  Up: 0.605 / Down: 0.405
+[23:51:55]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,102.32
+  Up: 0.545 / Down: 0.435
+[23:52:05]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,102.32
+  Up: 0.585 / Down: 0.475
+[23:52:15]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,101.29
+  Up: 0.665 / Down: 0.405
+[23:52:25]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,104.76
+  Up: 0.655 / Down: 0.350
+[23:52:34]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,115.35
+  Up: 0.760 / Down: 0.250
+[23:52:44]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,105.05
+  Up: 0.665 / Down: 0.355
+[23:52:55]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,111.62
+  Up: 0.725 / Down: 0.270
+[23:53:05]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,114.16
+  Up: 0.755 / Down: 0.245
+[23:53:16]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,108.72
+  Up: 0.715 / Down: 0.145
+[23:53:27]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,130.44
+  Up: 0.785 / Down: 0.195
+[23:53:36]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,129.10
+  Up: 0.815 / Down: 0.185
+[23:53:46]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,129.10
+  Up: 0.805 / Down: 0.195
+[23:53:55]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,138.97
+  Up: 0.870 / Down: 0.135
+[23:54:06]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,136.25
+  Up: 0.860 / Down: 0.155
+[23:54:15]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,133.53
+  Up: 0.865 / Down: 0.135
+[23:54:24]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,133.54
+  Up: 0.865 / Down: 0.135
+[23:54:33]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,133.53
+  Up: 0.885 / Down: 0.125
+[23:54:43]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,133.53
+  Up: 0.895 / Down: 0.105
+[23:54:52]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,132.51
+  Up: 0.880 / Down: 0.095
+[23:55:02]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,129.79
+  Up: 0.895 / Down: 0.095
+[23:55:11]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,129.79
+  Up: 0.940 / Down: 0.060
+[23:55:20]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,129.79
+  Up: 0.940 / Down: 0.065
+[23:55:29]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,121.72
+  Up: 0.900 / Down: 0.095
+[23:55:38]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,127.67
+  Up: 0.935 / Down: 0.065
+[23:55:47]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.925 / Down: 0.075
+[23:55:56]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.00
+  Up: 0.925 / Down: 0.075
+[23:56:05]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.920 / Down: 0.085
+[23:56:14]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.925 / Down: 0.075
+[23:56:23]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.930 / Down: 0.070
+[23:56:33]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.00
+  Up: 0.930 / Down: 0.065
+[23:56:42]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.00
+  Up: 0.945 / Down: 0.055
+[23:56:51]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.940 / Down: 0.060
+[23:57:00]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.945 / Down: 0.055
+[23:57:10]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.955 / Down: 0.045
+[23:57:19]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.955 / Down: 0.045
+[23:57:28]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.955 / Down: 0.045
+[23:57:37]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.955 / Down: 0.045
+[23:57:47]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.01
+  Up: 0.965 / Down: 0.025
+[23:57:56]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,122.00
+  Up: 0.975 / Down: 0.025
+[23:58:05]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.74
+  Up: 0.975 / Down: 0.015
+[23:58:14]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.74
+  Up: 0.985 / Down: 0.015
+[23:58:24]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.73
+  Up: 0.985 / Down: 0.015
+[23:58:32]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.74
+  Up: 0.985 / Down: 0.015
+[23:58:41]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.74
+  Up: 0.985 / Down: 0.015
+[23:58:52]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,124.74
+  Up: 0.985 / Down: 0.015
+[23:59:02]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,133.54
+  Up: 0.985 / Down: 0.005
+[23:59:13]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,130.81
+  Up: 0.995 / Down: 0.005
+[23:59:22]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,123.91
+  Up: 0.999 / Down: 0.001
+[23:59:31]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,112.60
+  Up: 0.999 / Down: 0.001
+[23:59:41]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,112.59
+  Up: 0.999 / Down: 0.002
+[23:59:50]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,112.59
+  Up: 0.999 / Down: 0.002
+[00:00:00]
+  Slug: btc-updown-15m-1771757100
+  Price to Beat: $68,078.04
+  Current Price: $68,112.59
+  Up: 1.000 / Down: 0.001
+[00:00:12]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,119.05
+  Up: 0.450 / Down: 0.545
+[00:00:21]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,119.05
+  Up: 0.445 / Down: 0.545
+[00:00:31]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,117.68
+  Up: 0.435 / Down: 0.560
+[00:00:41]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,113.94
+  Up: 0.445 / Down: 0.555
+[00:00:50]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,113.93
+  Up: 0.435 / Down: 0.555
+[00:01:00]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,131.36
+  Up: 0.465 / Down: 0.525
+[00:01:10]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,122.98
+  Up: 0.465 / Down: 0.525
+[00:01:20]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,127.67
+  Up: 0.495 / Down: 0.500
+[00:01:30]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,128.49
+  Up: 0.495 / Down: 0.495
+[00:01:40]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,128.48
+  Up: 0.490 / Down: 0.510
+[00:01:51]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,128.48
+  Up: 0.495 / Down: 0.505
+[00:02:01]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,140.81
+  Up: 0.525 / Down: 0.475
+[00:02:10]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,140.81
+  Up: 0.555 / Down: 0.445
+[00:02:21]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,146.70
+  Up: 0.580 / Down: 0.405
+[00:02:31]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,167.57
+  Up: 0.615 / Down: 0.320
+[00:02:40]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,166.53
+  Up: 0.605 / Down: 0.385
+[00:02:50]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,165.01
+  Up: 0.645 / Down: 0.355
+[00:02:59]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,167.72
+  Up: 0.620 / Down: 0.385
+[00:03:09]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,167.72
+  Up: 0.605 / Down: 0.385
+[00:03:18]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,168.75
+  Up: 0.645 / Down: 0.355
+[00:03:30]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,168.75
+  Up: 0.640 / Down: 0.360
+[00:03:39]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,187.10
+  Up: 0.640 / Down: 0.355
+[00:03:50]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,193.96
+  Up: 0.645 / Down: 0.360
+[00:04:00]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,180.45
+  Up: 0.595 / Down: 0.390
+[00:04:08]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,176.02
+  Up: 0.645 / Down: 0.355
+[00:04:17]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,173.33
+  Up: 0.645 / Down: 0.355
+[00:04:27]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,184.21
+  Up: 0.665 / Down: 0.335
+[00:04:37]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,186.01
+  Up: 0.695 / Down: 0.295
+[00:04:47]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,190.90
+  Up: 0.715 / Down: 0.270
+[00:04:56]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,184.23
+  Up: 0.745 / Down: 0.260
+[00:05:07]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,112.60
+  Current Price: $68,168.01
+  Up: 0.705 / Down: 0.275
+[00:05:17]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,186.00
+  Up: 0.835 / Down: 0.150
+[00:05:26]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,196.89
+  Up: 0.845 / Down: 0.155
+[00:05:37]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,196.88
+  Up: 0.845 / Down: 0.150
+[00:05:47]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,206.83
+  Up: 0.885 / Down: 0.115
+[00:05:56]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,209.79
+  Up: 0.905 / Down: 0.095
+[00:06:06]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,206.84
+  Up: 0.905 / Down: 0.095
+[00:06:15]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,206.88
+  Up: 0.885 / Down: 0.115
+[00:06:26]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,198.46
+  Up: 0.885 / Down: 0.105
+[00:06:35]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,198.45
+  Up: 0.895 / Down: 0.115
+[00:06:46]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,188.27
+  Up: 0.865 / Down: 0.135
+[00:06:54]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,184.22
+  Up: 0.885 / Down: 0.115
+[00:07:04]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,184.22
+  Up: 0.885 / Down: 0.115
+[00:07:14]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,195.53
+  Up: 0.925 / Down: 0.075
+[00:07:24]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 0.935 / Down: 0.065
+[00:07:33]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,207.16
+  Up: 0.975 / Down: 0.025
+[00:07:43]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,224.99
+  Up: 0.975 / Down: 0.025
+[00:07:52]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,213.02
+  Up: 0.975 / Down: 0.025
+[00:08:03]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,208.53
+  Up: 0.975 / Down: 0.025
+[00:08:14]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,208.52
+  Up: 0.975 / Down: 0.025
+[00:08:24]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,215.34
+  Up: 0.975 / Down: 0.025
+[00:08:33]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,218.15
+  Up: 0.977 / Down: 0.025
+[00:08:42]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,219.52
+  Up: 0.977 / Down: 0.022
+[00:08:51]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,236.27
+  Up: 0.976 / Down: 0.025
+[00:09:01]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,210.61
+  Up: 0.958 / Down: 0.035
+[00:09:11]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.08
+  Up: 0.975 / Down: 0.025
+[00:09:21]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,208.52
+  Up: 0.975 / Down: 0.025
+[00:09:31]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,208.53
+  Up: 0.975 / Down: 0.025
+[00:09:41]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,208.52
+  Up: 0.975 / Down: 0.025
+[00:09:50]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,192.43
+  Up: 0.975 / Down: 0.025
+[00:09:59]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,195.16
+  Up: 0.975 / Down: 0.025
+[00:10:09]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,184.23
+  Up: 0.975 / Down: 0.025
+[00:10:19]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,180.45
+  Up: 0.975 / Down: 0.025
+[00:10:29]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,180.46
+  Up: 0.977 / Down: 0.021
+[00:10:40]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,180.45
+  Up: 0.976 / Down: 0.024
+[00:10:49]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,180.45
+  Up: 0.977 / Down: 0.021
+[00:10:58]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,185.91
+  Up: 0.970 / Down: 0.030
+[00:11:08]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,187.28
+  Up: 0.970 / Down: 0.030
+[00:11:18]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,195.01
+  Up: 0.970 / Down: 0.030
+[00:11:28]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,200.55
+  Up: 0.978 / Down: 0.021
+[00:11:37]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,202.00
+  Up: 0.975 / Down: 0.025
+[00:11:47]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,202.00
+  Up: 0.985 / Down: 0.015
+[00:11:57]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,202.38
+  Up: 0.985 / Down: 0.015
+[00:12:06]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,202.37
+  Up: 0.985 / Down: 0.015
+[00:12:15]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 0.999 / Down: 0.002
+[00:12:25]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 0.999 / Down: 0.002
+[00:12:34]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 1.000 / Down: 0.001
+[00:12:44]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:12:54]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.43
+  Up: 1.000 / Down: 0.001
+[00:13:03]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,206.83
+  Up: 1.000 / Down: 0.001
+[00:13:12]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:13:21]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:13:31]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:13:40]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:13:50]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 1.000 / Down: 0.001
+[00:13:59]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:14:08]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 1.000 / Down: 0.001
+[00:14:18]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 1.000 / Down: 0.001
+[00:14:26]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.06
+  Up: 1.000 / Down: 0.001
+[00:14:36]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:14:46]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,203.07
+  Up: 1.000 / Down: 0.001
+[00:14:55]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,199.30
+  Up: 1.000 / Down: 0.001
+[00:15:05]
+  Slug: btc-updown-15m-1771758000
+  Price to Beat: $68,122.98
+  Current Price: $68,195.54
+  Up: 1.000 / Down: 0.001
+[00:15:18]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.91
+  Up: 0.405 / Down: 0.595
+[00:15:28]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.91
+  Up: 0.405 / Down: 0.590
+[00:15:37]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.91
+  Up: 0.435 / Down: 0.565
+[00:15:48]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.91
+  Up: 0.415 / Down: 0.555
+[00:15:59]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,206.84
+  Up: 0.445 / Down: 0.555
+[00:16:08]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,206.83
+  Up: 0.455 / Down: 0.545
+[00:16:17]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,232.00
+  Up: 0.465 / Down: 0.535
+[00:16:27]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,225.97
+  Up: 0.455 / Down: 0.550
+[00:16:37]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,236.99
+  Up: 0.445 / Down: 0.555
+[00:16:47]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,236.99
+  Up: 0.445 / Down: 0.545
+[00:16:57]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,231.90
+  Up: 0.435 / Down: 0.550
+[00:17:06]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,231.90
+  Up: 0.455 / Down: 0.545
+[00:17:17]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,229.17
+  Up: 0.470 / Down: 0.540
+[00:17:26]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,229.18
+  Up: 0.460 / Down: 0.530
+[00:17:35]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.08
+  Up: 0.345 / Down: 0.655
+[00:17:46]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.06
+  Up: 0.335 / Down: 0.665
+[00:17:56]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.98
+  Up: 0.380 / Down: 0.615
+[00:18:05]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.98
+  Up: 0.405 / Down: 0.595
+[00:18:15]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.98
+  Up: 0.415 / Down: 0.585
+[00:18:26]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.99
+  Up: 0.425 / Down: 0.575
+[00:18:35]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.98
+  Up: 0.425 / Down: 0.565
+[00:18:45]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.99
+  Up: 0.435 / Down: 0.585
+[00:18:56]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,196.09
+  Up: 0.365 / Down: 0.635
+[00:19:05]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,197.10
+  Up: 0.405 / Down: 0.595
+[00:19:15]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,197.11
+  Up: 0.405 / Down: 0.595
+[00:19:25]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.35
+  Up: 0.445 / Down: 0.570
+[00:19:35]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.36
+  Up: 0.445 / Down: 0.555
+[00:19:44]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.35
+  Up: 0.445 / Down: 0.555
+[00:19:54]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,203.36
+  Up: 0.435 / Down: 0.565
+[00:20:04]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,207.61
+  Current Price: $68,206.83
+  Up: 0.445 / Down: 0.525
+[00:20:14]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.99
+  Up: 0.505 / Down: 0.495
+[00:20:25]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.99
+  Up: 0.505 / Down: 0.485
+[00:20:36]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,214.00
+  Up: 0.515 / Down: 0.485
+[00:20:45]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.99
+  Up: 0.515 / Down: 0.490
+[00:20:54]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,214.65
+  Up: 0.510 / Down: 0.485
+[00:21:05]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,215.01
+  Up: 0.505 / Down: 0.495
+[00:21:15]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,210.93
+  Up: 0.430 / Down: 0.615
+[00:21:26]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,197.97
+  Up: 0.395 / Down: 0.615
+[00:21:37]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,197.96
+  Up: 0.445 / Down: 0.555
+[00:21:47]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,197.96
+  Up: 0.385 / Down: 0.695
+[00:21:57]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,180.48
+  Up: 0.275 / Down: 0.735
+[00:22:06]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,188.38
+  Up: 0.335 / Down: 0.635
+[00:22:16]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,189.98
+  Up: 0.315 / Down: 0.590
+[00:22:26]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,199.29
+  Up: 0.425 / Down: 0.575
+[00:22:36]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,200.00
+  Up: 0.425 / Down: 0.605
+[00:22:46]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,201.35
+  Up: 0.385 / Down: 0.615
+[00:22:55]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,201.36
+  Up: 0.385 / Down: 0.615
+[00:23:06]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,201.35
+  Up: 0.385 / Down: 0.605
+[00:23:16]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,201.36
+  Up: 0.390 / Down: 0.610
+[00:23:27]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,204.09
+  Up: 0.505 / Down: 0.495
+[00:23:38]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.03
+  Up: 0.505 / Down: 0.495
+[00:23:48]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.03
+  Up: 0.505 / Down: 0.490
+[00:23:58]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,208.31
+  Up: 0.495 / Down: 0.505
+[00:24:07]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,208.30
+  Up: 0.505 / Down: 0.525
+[00:24:16]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,208.30
+  Up: 0.505 / Down: 0.495
+[00:24:27]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,208.30
+  Up: 0.515 / Down: 0.485
+[00:24:37]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,208.31
+  Up: 0.505 / Down: 0.495
+[00:24:47]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.93
+  Up: 0.470 / Down: 0.515
+[00:24:56]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.04
+  Up: 0.500 / Down: 0.485
+[00:25:05]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.04
+  Up: 0.480 / Down: 0.515
+[00:25:14]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.04
+  Up: 0.495 / Down: 0.505
+[00:25:25]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,206.04
+  Up: 0.490 / Down: 0.505
+[00:25:34]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,210.00
+  Up: 0.585 / Down: 0.420
+[00:25:45]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,214.37
+  Up: 0.595 / Down: 0.385
+[00:25:55]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,214.37
+  Up: 0.605 / Down: 0.380
+[00:26:06]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,214.38
+  Up: 0.635 / Down: 0.360
+[00:26:16]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,212.00
+  Up: 0.555 / Down: 0.435
+[00:26:25]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,212.00
+  Up: 0.565 / Down: 0.435
+[00:26:35]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,211.99
+  Up: 0.545 / Down: 0.455
+[00:26:46]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,211.99
+  Up: 0.530 / Down: 0.525
+[00:26:56]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.04
+  Up: 0.515 / Down: 0.475
+[00:27:07]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.12
+  Up: 0.545 / Down: 0.445
+[00:27:17]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.12
+  Up: 0.550 / Down: 0.375
+[00:27:29]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.12
+  Up: 0.615 / Down: 0.365
+[00:27:38]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.12
+  Up: 0.630 / Down: 0.365
+[00:27:52]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.12
+  Up: 0.615 / Down: 0.370
+[00:28:03]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,205.13
+  Up: 0.645 / Down: 0.360
+[00:28:13]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,211.28
+  Up: 0.780 / Down: 0.115
+[00:28:24]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.98
+  Up: 0.865 / Down: 0.135
+[00:28:33]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.98
+  Up: 0.885 / Down: 0.105
+[00:28:46]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.97
+  Up: 0.845 / Down: 0.150
+[00:28:56]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.98
+  Up: 0.885 / Down: 0.105
+[00:29:06]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.98
+  Up: 0.895 / Down: 0.105
+[00:29:16]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.98
+  Up: 0.895 / Down: 0.105
+[00:29:27]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.97
+  Up: 0.915 / Down: 0.085
+[00:29:37]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.97
+  Up: 0.935 / Down: 0.065
+[00:29:48]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.97
+  Up: 0.965 / Down: 0.025
+[00:29:58]
+  Slug: btc-updown-15m-1771758900
+  Price to Beat: $68,206.83
+  Current Price: $68,213.97
+  Up: 0.975 / Down: 0.040
+[00:30:12]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,213.97
+  Up: 0.425 / Down: 0.580
+[00:30:22]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.55
+  Up: 0.385 / Down: 0.625
+[00:30:32]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.55
+  Up: 0.390 / Down: 0.605
+[00:30:42]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.56
+  Up: 0.405 / Down: 0.590
+[00:30:52]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.55
+  Up: 0.415 / Down: 0.575
+[00:31:03]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.56
+  Up: 0.385 / Down: 0.605
+[00:31:13]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.55
+  Up: 0.395 / Down: 0.615
+[00:31:22]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.56
+  Up: 0.355 / Down: 0.615
+[00:31:32]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.55
+  Up: 0.375 / Down: 0.635
+[00:31:42]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.320 / Down: 0.675
+[00:31:51]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.65
+  Up: 0.305 / Down: 0.685
+[00:32:02]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.300 / Down: 0.705
+[00:32:11]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.285 / Down: 0.715
+[00:32:21]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,208.68
+  Up: 0.335 / Down: 0.675
+[00:32:30]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,208.68
+  Up: 0.315 / Down: 0.685
+[00:32:40]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,208.67
+  Up: 0.315 / Down: 0.685
+[00:32:50]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,204.93
+  Up: 0.295 / Down: 0.710
+[00:33:00]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.285 / Down: 0.715
+[00:33:11]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.65
+  Up: 0.295 / Down: 0.710
+[00:33:20]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.65
+  Up: 0.295 / Down: 0.705
+[00:33:29]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.285 / Down: 0.710
+[00:33:40]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.285 / Down: 0.720
+[00:33:51]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.265 / Down: 0.735
+[00:34:02]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,203.66
+  Up: 0.295 / Down: 0.705
+[00:34:13]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,210.66
+  Up: 0.415 / Down: 0.565
+[00:34:24]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,218.75
+  Up: 0.425 / Down: 0.625
+[00:34:33]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,217.73
+  Up: 0.385 / Down: 0.605
+[00:34:42]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,217.73
+  Up: 0.405 / Down: 0.560
+[00:34:52]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,217.73
+  Up: 0.445 / Down: 0.545
+[00:35:03]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,230.99
+  Current Price: $68,221.71
+  Up: 0.455 / Down: 0.565
+[00:35:13]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,217.72
+  Up: 0.400 / Down: 0.600
+[00:35:22]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,217.73
+  Up: 0.385 / Down: 0.615
+[00:35:31]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,217.73
+  Up: 0.385 / Down: 0.625
+[00:35:41]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,217.73
+  Up: 0.375 / Down: 0.610
+[00:35:50]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,212.06
+  Up: 0.375 / Down: 0.625
+[00:36:01]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,210.01
+  Up: 0.390 / Down: 0.595
+[00:36:11]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,212.79
+  Up: 0.385 / Down: 0.645
+[00:36:21]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,218.29
+  Up: 0.455 / Down: 0.600
+[00:36:31]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,218.30
+  Up: 0.425 / Down: 0.585
+[00:36:40]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,219.18
+  Up: 0.420 / Down: 0.580
+[00:36:52]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,218.29
+  Up: 0.430 / Down: 0.575
+[00:37:02]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,218.30
+  Up: 0.430 / Down: 0.570
+[00:37:11]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,218.29
+  Up: 0.430 / Down: 0.715
+[00:37:23]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,193.87
+  Up: 0.255 / Down: 0.745
+[00:37:34]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,193.87
+  Up: 0.255 / Down: 0.705
+[00:37:45]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,180.13
+  Up: 0.130 / Down: 0.885
+[00:37:55]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,176.07
+  Up: 0.115 / Down: 0.865
+[00:38:06]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,176.07
+  Up: 0.135 / Down: 0.845
+[00:38:17]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,176.07
+  Up: 0.155 / Down: 0.845
+[00:38:27]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,176.06
+  Up: 0.135 / Down: 0.865
+[00:38:37]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.16
+  Up: 0.095 / Down: 0.935
+[00:38:47]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,143.99
+  Up: 0.025 / Down: 0.975
+[00:38:57]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,138.98
+  Up: 0.025 / Down: 0.945
+[00:39:07]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,154.22
+  Up: 0.065 / Down: 0.945
+[00:39:17]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,157.82
+  Up: 0.055 / Down: 0.945
+[00:39:27]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,157.82
+  Up: 0.065 / Down: 0.935
+[00:39:36]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,155.10
+  Up: 0.055 / Down: 0.945
+[00:39:47]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,155.10
+  Up: 0.055 / Down: 0.945
+[00:39:57]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,155.10
+  Up: 0.055 / Down: 0.945
+[00:40:08]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,157.83
+  Up: 0.060 / Down: 0.940
+[00:40:18]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,161.59
+  Up: 0.035 / Down: 0.960
+[00:40:28]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,161.60
+  Up: 0.055 / Down: 0.955
+[00:40:37]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.13
+  Up: 0.035 / Down: 0.965
+[00:40:47]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.14
+  Up: 0.035 / Down: 0.965
+[00:40:56]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.13
+  Up: 0.035 / Down: 0.965
+[00:41:06]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.13
+  Up: 0.025 / Down: 0.975
+[00:41:17]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.13
+  Up: 0.035 / Down: 0.975
+[00:41:27]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,169.14
+  Up: 0.015 / Down: 0.985
+[00:41:37]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.015 / Down: 0.985
+[00:41:47]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.025 / Down: 0.985
+[00:41:57]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.10
+  Up: 0.015 / Down: 0.985
+[00:42:07]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.10
+  Up: 0.015 / Down: 0.985
+[00:42:16]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.015 / Down: 0.985
+[00:42:27]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.10
+  Up: 0.015 / Down: 0.985
+[00:42:36]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.015 / Down: 0.985
+[00:42:47]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.015 / Down: 0.995
+[00:42:57]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.005 / Down: 0.995
+[00:43:08]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,168.11
+  Up: 0.005 / Down: 0.995
+[00:43:18]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,167.07
+  Up: 0.005 / Down: 0.995
+[00:43:29]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,167.07
+  Up: 0.005 / Down: 0.995
+[00:43:39]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,167.95
+  Up: 0.005 / Down: 0.995
+[00:43:49]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,172.90
+  Up: 0.005 / Down: 0.995
+[00:44:00]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,172.91
+  Up: 0.005 / Down: 0.999
+[00:44:19]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,172.90
+  Up: 0.002 / Down: 0.999
+[00:44:36]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,173.93
+  Up: 0.001 / Down: 0.999
+[00:44:55]
+  Slug: btc-updown-15m-1771759800
+  Price to Beat: $68,210.55
+  Current Price: $68,173.93
+  Up: 0.001 / Down: 0.999
+[00:45:10]
+  Slug: btc-updown-15m-1771760700
+  Price to Beat: $68,186.46
+  Current Price: $68,173.93
+  Up: 0.455 / Down: 0.545
