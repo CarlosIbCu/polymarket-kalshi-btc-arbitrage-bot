@@ -1,118 +1,93 @@
 import datetime
 import pytz
+import requests
+import json
 
 # Base URL for Polymarket events
 BASE_URL = "https://polymarket.com/event/"
 
-def generate_slug(target_time):
+def get_current_15min_window(now_utc=None):
     """
-    Generates the Polymarket event slug for a given datetime.
-    Format: bitcoin-up-or-down-[month]-[day]-[hour][am/pm]-et
-    Example: bitcoin-up-or-down-november-26-1pm-et
+    Given a UTC datetime, return the start of the current 15-minute window.
+    e.g., 17:07 UTC -> 17:00 UTC, 17:22 UTC -> 17:15 UTC
     """
-    # Ensure time is in Eastern Time
-    et_tz = pytz.timezone('US/Eastern')
-    if target_time.tzinfo is None:
-        # Assume UTC if no timezone is provided, then convert to ET
-        target_time = pytz.utc.localize(target_time).astimezone(et_tz)
+    if now_utc is None:
+        now_utc = datetime.datetime.now(pytz.utc)
+    # Floor to 15-minute boundary
+    floored_minute = (now_utc.minute // 15) * 15
+    return now_utc.replace(minute=floored_minute, second=0, microsecond=0)
+
+def generate_slug(target_time_utc, asset="btc"):
+    """
+    Generates the Polymarket 15-minute market slug for a given UTC datetime.
+    Format: {asset}-updown-15m-{unix_timestamp}
+    The timestamp is the Unix epoch of the 15-minute candle start in UTC.
+
+    Example: btc-updown-15m-1771476300
+    Example: eth-updown-15m-1771667100
+    """
+    # Ensure UTC
+    if target_time_utc.tzinfo is None:
+        target_time_utc = pytz.utc.localize(target_time_utc)
     else:
-        target_time = target_time.astimezone(et_tz)
+        target_time_utc = target_time_utc.astimezone(pytz.utc)
 
-    # Format components
-    month = target_time.strftime("%B").lower()
-    day = target_time.day
-    
-    # Hour formatting: 12-hour format with am/pm, lowercase, no leading zero for single digits
-    hour_int = int(target_time.strftime("%I"))
-    am_pm = target_time.strftime("%p").lower()
-    
-    slug = f"bitcoin-up-or-down-{month}-{day}-{hour_int}{am_pm}-et"
-    return slug
+    # Floor to 15-min boundary
+    floored_minute = (target_time_utc.minute // 15) * 15
+    candle_start = target_time_utc.replace(minute=floored_minute, second=0, microsecond=0)
 
-def generate_market_url(target_time):
+    timestamp = int(candle_start.timestamp())
+    return f"{asset.lower()}-updown-15m-{timestamp}"
+
+def generate_market_url(target_time_utc, asset="btc"):
     """
-    Generates the full Polymarket URL for a given datetime.
+    Generates the full Polymarket URL for a given UTC datetime.
     """
-    slug = generate_slug(target_time)
+    slug = generate_slug(target_time_utc, asset=asset)
     return f"{BASE_URL}{slug}"
 
-def get_next_market_urls(num_hours=5):
+def get_current_market_slug(asset="btc"):
     """
-    Generates URLs for the next 'num_hours' hourly markets.
+    Returns the slug for the currently active 15-minute market for the given asset.
+    First tries to fetch from Polymarket API, falls back to timestamp generation.
     """
-    urls = []
-    now = datetime.datetime.now(pytz.utc)
-    
-    # Start from the next full hour
-    next_hour = now.replace(minute=0, second=0, microsecond=0) + datetime.timedelta(hours=1)
-    
-    for i in range(num_hours):
-        target_time = next_hour + datetime.timedelta(hours=i)
-        urls.append(generate_market_url(target_time))
-        
-    return urls
+    try:
+        params = {
+            "active": "true",
+            "closed": "false",
+            "limit": 20
+        }
+        r = requests.get("https://gamma-api.polymarket.com/events", params=params)
+        data = r.json()
+        search_term = f"{asset.lower()}-updown-15m"
+        for event in data:
+            slug = event.get('slug', '')
+            if search_term in slug:
+                # print(f"Found active slug from API: {slug}")
+                return slug
+    except Exception as e:
+        # print(f"Error fetching active slug: {e}")
+        pass
 
-def get_current_market_url():
-    """
-    Determines the URL for the 'current' necessary market based on the current time.
-    Logic: If it's 12:30 PM, the market resolving/relevant is likely the 1 PM one.
-    """
     now = datetime.datetime.now(pytz.utc)
-    
-    # If we are in the current hour (e.g., 12:30), the "current" market is usually the one ending at the next hour (1:00).
-    # Based on the user's example: "november-26-1pm-et"
-    # If the user wants the market for the "next hour", we target the top of the next hour.
-    
-    next_hour = now.replace(minute=0, second=0, microsecond=0) + datetime.timedelta(hours=1)
-    return generate_market_url(next_hour)
-
-def generate_urls_until_year_end():
-    """
-    Generates URLs for every hour from now until Jan 1, 2026.
-    Saves them to 'market_urls_2025.txt'.
-    """
-    urls = []
-    now = datetime.datetime.now(pytz.utc)
-    
-    # Start from the next full hour
-    current_target = now.replace(minute=0, second=0, microsecond=0) + datetime.timedelta(hours=1)
-    
-    # End date: Jan 1, 2026 00:00 UTC (approx, depends on ET)
-    # Let's just go until the year changes in ET
-    et_tz = pytz.timezone('US/Eastern')
-    
-    print(f"Generating URLs starting from: {current_target.astimezone(et_tz)}")
-    
-    while True:
-        # Check if we reached 2026 in ET
-        et_time = current_target.astimezone(et_tz)
-        if et_time.year >= 2026:
-            break
-            
-        urls.append(generate_market_url(current_target))
-        current_target += datetime.timedelta(hours=1)
-        
-    with open("market_urls_2025.txt", "w") as f:
-        for url in urls:
-            f.write(url + "\n")
-            
-    print(f"Generated {len(urls)} URLs and saved to 'market_urls_2025.txt'")
+    window_start = get_current_15min_window(now)
+    return generate_slug(window_start, asset=asset)
 
 if __name__ == "__main__":
-    print("--- Polymarket URL Generator ---")
-    
-    # Test with the user's specific example time to verify logic
-    # User example: bitcoin-up-or-down-november-26-1pm-et
-    # This corresponds to Nov 26, 1 PM ET.
-    
+    print("--- Polymarket 15m BTC URL Generator ---")
+
+    now = datetime.datetime.now(pytz.utc)
     et_tz = pytz.timezone('US/Eastern')
-    test_time = et_tz.localize(datetime.datetime(2025, 11, 26, 13, 0, 0))
-    print(f"Test Time (ET): {test_time}")
-    print(f"Generated URL: {generate_market_url(test_time)}")
-    
-    print("\n--- Current Market URL ---")
-    print(f"Current Time (UTC): {datetime.datetime.now(pytz.utc)}")
-    print(f"Current Market URL: {get_current_market_url()}")
-    
-    print("\n--- Generating URLs until 2026 ---")
-    generate_urls_until_year_end()
+
+    print(f"Current Time (UTC): {now}")
+    print(f"Current Time (ET):  {now.astimezone(et_tz)}")
+    print()
+
+    window_start = get_current_15min_window(now)
+    slug = generate_slug(window_start)
+    url = generate_market_url(window_start)
+
+    print(f"Current 15m Window Start (UTC): {window_start}")
+    print(f"Current 15m Window Start (ET):  {window_start.astimezone(et_tz)}")
+    print(f"Generated Slug: {slug}")
+    print(f"Generated URL:  {url}")

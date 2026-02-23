@@ -1,80 +1,88 @@
 import datetime
 import pytz
 
-# Base URL for Kalshi events
-BASE_URL = "https://kalshi.com/markets/kxbtcd/bitcoin-price-abovebelow/"
+# Base URL for Kalshi 15m BTC markets
+BASE_URL = "https://kalshi.com/markets/kxbtc15m/bitcoin-price-up-down/"
+SERIES_TICKER = "KXBTC15M"
 
-def generate_kalshi_slug(target_time):
+ET_TZ = pytz.timezone('US/Eastern')
+
+def get_current_15min_window(now_utc=None):
     """
-    Generates the Kalshi event slug for a given datetime.
-    Format: kxbtcd-[YY][MMM][DD][HH]
-    Example: kxbtcd-25nov2614 (Nov 26, 2025, 14:00 ET)
+    Given a UTC datetime, return the start of the current 15-minute window (UTC).
+    e.g., 17:07 UTC -> 17:00 UTC, 17:22 UTC -> 17:15 UTC
     """
-    # Ensure time is in Eastern Time
-    et_tz = pytz.timezone('US/Eastern')
-    if target_time.tzinfo is None:
-        # Assume UTC if no timezone is provided, then convert to ET
-        target_time = pytz.utc.localize(target_time).astimezone(et_tz)
+    if now_utc is None:
+        now_utc = datetime.datetime.now(pytz.utc)
+    floored_minute = (now_utc.minute // 15) * 15
+    return now_utc.replace(minute=floored_minute, second=0, microsecond=0)
+
+def generate_kalshi_event_ticker(target_time_utc, asset="btc"):
+    """
+    Generates the Kalshi event ticker for a given UTC datetime.
+
+    Format: KX{ASSET}15M-{YY}{MMM}{DD}{HHMM}
+    where YY=2-digit year, MMM=uppercase 3-letter month, DD=day, HHMM=time
+    ALL in Eastern Time (ET) at the candle CLOSE time.
+
+    Example: KXBTC15M-26FEB190000
+    Example: KXETH15M-26FEB210500
+    """
+    series_ticker = f"KX{asset.upper()}15M"
+    
+    if target_time_utc.tzinfo is None:
+        target_time_utc = pytz.utc.localize(target_time_utc)
     else:
-        target_time = target_time.astimezone(et_tz)
+        target_time_utc = target_time_utc.astimezone(pytz.utc)
 
-    # Format components
-    year = target_time.strftime("%y") # 2-digit year
-    month = target_time.strftime("%b").lower() # 3-letter month, lowercase
-    day = target_time.strftime("%d") # 2-digit day
-    hour = target_time.strftime("%H") # 24-hour format
-    
-    slug = f"kxbtcd-{year}{month}{day}{hour}"
-    return slug
+    # Floor to nearest 15-min and get candle close (start + 15 min)
+    floored_minute = (target_time_utc.minute // 15) * 15
+    candle_start_utc = target_time_utc.replace(minute=floored_minute, second=0, microsecond=0)
+    candle_close_utc = candle_start_utc + datetime.timedelta(minutes=15)
 
-def generate_kalshi_url(target_time):
-    """
-    Generates the full Kalshi URL for a given datetime.
-    """
-    slug = generate_kalshi_slug(target_time)
-    return f"{BASE_URL}{slug}"
+    # Convert close to ET
+    candle_close_et = candle_close_utc.astimezone(ET_TZ)
 
-def generate_urls_until_year_end():
+    year = candle_close_et.strftime("%y")           # 2-digit year, e.g. "26"
+    month = candle_close_et.strftime("%b").upper()  # e.g. "FEB"
+    day = candle_close_et.strftime("%d")            # e.g. "19"
+    hour = candle_close_et.strftime("%H")           # e.g. "00"
+    minute = candle_close_et.strftime("%M")         # e.g. "00"
+
+    return f"{series_ticker}-{year}{month}{day}{hour}{minute}"
+
+def generate_kalshi_url(target_time_utc, asset="btc"):
     """
-    Generates URLs for every hour from now until Jan 1, 2026.
-    Saves them to 'kalshi_urls_2025.txt'.
+    Generates the Kalshi URL for the 15m market for a given UTC time and asset.
     """
-    urls = []
-    now = datetime.datetime.now(pytz.utc)
-    
-    # Start from the next full hour
-    current_target = now.replace(minute=0, second=0, microsecond=0) + datetime.timedelta(hours=1)
-    
-    # End date: Jan 1, 2026 00:00 UTC (approx, depends on ET)
-    et_tz = pytz.timezone('US/Eastern')
-    
-    print(f"Generating URLs starting from: {current_target.astimezone(et_tz)}")
-    
-    while True:
-        # Check if we reached 2026 in ET
-        et_time = current_target.astimezone(et_tz)
-        if et_time.year >= 2026:
-            break
-            
-        urls.append(generate_kalshi_url(current_target))
-        current_target += datetime.timedelta(hours=1)
-        
-    with open("kalshi_urls_2025.txt", "w") as f:
-        for url in urls:
-            f.write(url + "\n")
-            
-    print(f"Generated {len(urls)} URLs and saved to 'kalshi_urls_2025.txt'")
+    base_url = f"https://kalshi.com/markets/kx{asset.lower()}15m/{asset.lower()}-price-up-down/"
+    event_ticker = generate_kalshi_event_ticker(target_time_utc, asset=asset)
+    return f"{base_url}{event_ticker.lower()}"
 
 if __name__ == "__main__":
-    print("--- Kalshi URL Generator ---")
-    
-    # Test with the user's specific example time to verify logic
-    # User example: kxbtcd-25nov2614 -> Nov 26, 2025, 14:00 ET
-    
+    print("--- Kalshi 15m BTC Market Generator ---")
+
+    now = datetime.datetime.now(pytz.utc)
     et_tz = pytz.timezone('US/Eastern')
-    test_time = et_tz.localize(datetime.datetime(2025, 11, 26, 14, 0, 0))
-    print(f"Test Time (ET): {test_time}")
-    print(f"Generated URL: {generate_kalshi_url(test_time)}")
-    
-    print("\n--- Generating URLs until 2026 ---")
-    generate_urls_until_year_end()
+
+    print(f"Current Time (UTC): {now}")
+    print(f"Current Time (ET):  {now.astimezone(et_tz)}")
+    print()
+
+    event_ticker = generate_kalshi_event_ticker(now)
+    url = generate_kalshi_url(now)
+
+    print(f"Event Ticker: {event_ticker}")
+    print(f"URL:          {url}")
+
+    # Verify against the known example:
+    # kxbtc15m-26feb190000
+    # open_time: 2026-02-19T04:45:00Z, close_time: 2026-02-19T05:00:00Z
+    # close = 05:00 UTC = 00:00 ET on Feb 19, 2026
+    # -> 26FEB190000
+    test_utc = pytz.utc.localize(datetime.datetime(2026, 2, 19, 4, 51, 0))
+    result = generate_kalshi_event_ticker(test_utc)
+    print(f"\nVerification test (2026-02-19 04:51 UTC):")
+    print(f"  Result:   {result}")
+    print(f"  Expected: KXBTC15M-26FEB190000")
+    print(f"  Match: {result == 'KXBTC15M-26FEB190000'}")

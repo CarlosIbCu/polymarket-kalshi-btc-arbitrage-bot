@@ -2,3 +2,4 @@ fastapi>=0.100.0
 uvicorn>=0.20.0
 requests>=2.31.0
 pytz>=2023.3
+web3>=6.0.0
