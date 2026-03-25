@@ -39,7 +39,17 @@ interface MarketData {
     is_arbitrage: boolean
     margin: number
   }>
-  opportunities: Array<any>
+  opportunities: Array<{
+    kalshi_strike: number
+    type: string
+    poly_leg: string
+    kalshi_leg: string
+    poly_cost: number
+    kalshi_cost: number
+    total_cost: number
+    is_arbitrage: boolean
+    margin: number
+  }>
   errors: string[]
 }
 
@@ -57,12 +67,22 @@ export default function Dashboard() {
       setLoading(false)
     } catch (err) {
       console.error("Failed to fetch data", err)
+      // On failure, we should probably set loading to false to show the dashboard
+      // with whatever data we currently have, or an empty state
+      setLoading(false)
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    // Initial fetch
     fetchData()
-    const interval = setInterval(fetchData, 1000)
+
+    // Setup polling
+    const interval = setInterval(() => {
+      fetchData()
+    }, 1000)
+
     return () => clearInterval(interval)
   }, [])
 
@@ -149,35 +169,41 @@ export default function Dashboard() {
         <Card>
           <CardHeader>
             <CardTitle>Polymarket</CardTitle>
-            <CardDescription>Target: {data.polymarket.slug}</CardDescription>
+            <CardDescription>Target: {data.polymarket?.slug || "Unavailable"}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-100 p-3 rounded-md">
-                  <div className="text-xs text-muted-foreground uppercase font-bold">Price to Beat</div>
-                  <div className="text-xl font-mono font-semibold">${data.polymarket.price_to_beat?.toLocaleString()}</div>
+            {data.polymarket ? (
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-slate-100 p-3 rounded-md">
+                    <div className="text-xs text-muted-foreground uppercase font-bold">Price to Beat</div>
+                    <div className="text-xl font-mono font-semibold">${data.polymarket.price_to_beat?.toLocaleString() || "N/A"}</div>
+                  </div>
+                  <div className="bg-slate-100 p-3 rounded-md">
+                    <div className="text-xs text-muted-foreground uppercase font-bold">Current Price</div>
+                    <div className="text-xl font-mono font-semibold">${data.polymarket.current_price?.toLocaleString() || "N/A"}</div>
+                  </div>
                 </div>
-                <div className="bg-slate-100 p-3 rounded-md">
-                  <div className="text-xs text-muted-foreground uppercase font-bold">Current Price</div>
-                  <div className="text-xl font-mono font-semibold">${data.polymarket.current_price?.toLocaleString()}</div>
+
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center text-sm">
+                    <span>UP Contract</span>
+                    <span className="font-mono font-medium">${data.polymarket.prices?.Up?.toFixed(3) || "0.000"}</span>
+                  </div>
+                  <Progress value={(data.polymarket.prices?.Up || 0) * 100} className="h-2 bg-slate-100" indicatorClassName="bg-green-500" />
+
+                  <div className="flex justify-between items-center text-sm mt-2">
+                    <span>DOWN Contract</span>
+                    <span className="font-mono font-medium">${data.polymarket.prices?.Down?.toFixed(3) || "0.000"}</span>
+                  </div>
+                  <Progress value={(data.polymarket.prices?.Down || 0) * 100} className="h-2 bg-slate-100" indicatorClassName="bg-red-500" />
                 </div>
               </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-center text-sm">
-                  <span>UP Contract</span>
-                  <span className="font-mono font-medium">${data.polymarket.prices.Up?.toFixed(3)}</span>
-                </div>
-                <Progress value={data.polymarket.prices.Up * 100} className="h-2 bg-slate-100" indicatorClassName="bg-green-500" />
-
-                <div className="flex justify-between items-center text-sm mt-2">
-                  <span>DOWN Contract</span>
-                  <span className="font-mono font-medium">${data.polymarket.prices.Down?.toFixed(3)}</span>
-                </div>
-                <Progress value={data.polymarket.prices.Down * 100} className="h-2 bg-slate-100" indicatorClassName="bg-red-500" />
+            ) : (
+              <div className="flex items-center justify-center p-8 text-muted-foreground bg-slate-50 rounded-md border border-dashed">
+                Polymarket data is currently unavailable
               </div>
-            </div>
+            )}
           </CardContent>
         </Card>
 
@@ -185,37 +211,46 @@ export default function Dashboard() {
         <Card>
           <CardHeader>
             <CardTitle>Kalshi</CardTitle>
-            <CardDescription>Ticker: {data.kalshi.event_ticker}</CardDescription>
+            <CardDescription>Ticker: {data.kalshi?.event_ticker || "Unavailable"}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <div className="bg-slate-100 p-3 rounded-md mb-4">
-                <div className="text-xs text-muted-foreground uppercase font-bold">Current Price</div>
-                <div className="text-xl font-mono font-semibold">${data.kalshi.current_price?.toLocaleString()}</div>
-              </div>
+            {data.kalshi ? (
+              <div className="space-y-4">
+                <div className="bg-slate-100 p-3 rounded-md mb-4">
+                  <div className="text-xs text-muted-foreground uppercase font-bold">Current Price</div>
+                  <div className="text-xl font-mono font-semibold">${data.kalshi.current_price?.toLocaleString() || "N/A"}</div>
+                </div>
 
-              <div className="space-y-3 max-h-[200px] overflow-y-auto pr-2">
-                {data.kalshi.markets
-                  .filter(m => Math.abs(m.strike - data.polymarket.price_to_beat) < 2500)
-                  .map((m, i) => (
-                    <div key={i} className="text-sm border-b pb-2 last:border-0">
-                      <div className="flex justify-between font-medium mb-1">
-                        <span>{m.subtitle}</span>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="flex justify-between text-xs text-muted-foreground">
-                          <span>Yes: {m.yes_ask}¢</span>
-                          <span>No: {m.no_ask}¢</span>
+                <div className="space-y-3 max-h-[200px] overflow-y-auto pr-2">
+                  {data.kalshi.markets
+                    ?.filter(m => !data.polymarket || Math.abs(m.strike - (data.polymarket.price_to_beat || 0)) < 2500)
+                    .map((m, i) => (
+                      <div key={i} className="text-sm border-b pb-2 last:border-0">
+                        <div className="flex justify-between font-medium mb-1">
+                          <span>{m.subtitle}</span>
                         </div>
-                        <div className="flex h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                          <div className="bg-green-500 h-full" style={{ width: `${m.yes_ask}%` }}></div>
-                          <div className="bg-red-500 h-full" style={{ width: `${m.no_ask}%` }}></div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="flex justify-between text-xs text-muted-foreground">
+                            <span>Yes: {m.yes_ask}¢</span>
+                            <span>No: {m.no_ask}¢</span>
+                          </div>
+                          <div className="flex h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                            <div className="bg-green-500 h-full" style={{ width: `${m.yes_ask}%` }}></div>
+                            <div className="bg-red-500 h-full" style={{ width: `${m.no_ask}%` }}></div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  {(!data.kalshi.markets || data.kalshi.markets.length === 0) && (
+                    <div className="text-center text-sm text-muted-foreground p-2">No markets available</div>
+                  )}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="flex items-center justify-center p-8 text-muted-foreground bg-slate-50 rounded-md border border-dashed">
+                Kalshi data is currently unavailable
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>

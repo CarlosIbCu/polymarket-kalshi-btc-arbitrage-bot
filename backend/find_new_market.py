@@ -21,12 +21,13 @@ def generate_slug(target_time):
     # Format components
     month = target_time.strftime("%B").lower()
     day = target_time.day
+    year = target_time.year
     
     # Hour formatting: 12-hour format with am/pm, lowercase, no leading zero for single digits
     hour_int = int(target_time.strftime("%I"))
     am_pm = target_time.strftime("%p").lower()
     
-    slug = f"bitcoin-up-or-down-{month}-{day}-{hour_int}{am_pm}-et"
+    slug = f"bitcoin-up-or-down-{month}-{day}-{year}-{hour_int}{am_pm}-et"
     return slug
 
 def generate_market_url(target_time):
