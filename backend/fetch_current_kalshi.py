@@ -1,132 +1,118 @@
 import requests
-import datetime
-import pytz
 import re
-from get_current_markets import get_current_market_urls
+import datetime
 
 # Configuration
+# "elections" subdomain covers ALL markets
 KALSHI_API_URL = "https://api.elections.kalshi.com/trade-api/v2/markets"
 BINANCE_PRICE_URL = "https://api.binance.com/api/v3/ticker/price"
-SYMBOL = "BTCUSDT"
+BTC_SYMBOL = "BTCUSDT"
 
-def get_binance_current_price():
+def get_binance_price():
     try:
-        response = requests.get(BINANCE_PRICE_URL, params={"symbol": SYMBOL})
-        response.raise_for_status()
-        data = response.json()
-        return float(data["price"]), None
-    except Exception as e:
-        return None, str(e)
-
-def get_kalshi_markets(event_ticker):
-    try:
-        params = {"limit": 100, "event_ticker": event_ticker}
-        response = requests.get(KALSHI_API_URL, params=params)
-        response.raise_for_status()
-        data = response.json()
-        return data.get('markets', []), None
-    except Exception as e:
-        return None, str(e)
-
-def parse_strike(subtitle):
-    # Format: "$96,250 or above"
-    # Extract number, remove commas
-    match = re.search(r'\$([\d,]+)', subtitle)
-    if match:
-        return float(match.group(1).replace(',', ''))
-    return 0.0
+        resp = requests.get(BINANCE_PRICE_URL, params={"symbol": BTC_SYMBOL})
+        data = resp.json()
+        return float(data["price"])
+    except:
+        return 0.0
 
 def fetch_kalshi_data_struct():
     """
-    Fetches current Kalshi markets and returns a list of market dictionaries.
+    Dynamically fetches ACTIVE Kalshi Bitcoin Daily markets.
+    Fixes the '400 Bad Request' by using status='open'.
     """
     try:
-        # Get current market info
-        market_info = get_current_market_urls()
-        kalshi_url = market_info["kalshi"]
+        # 1. Fetch Markets
+        # CRITICAL FIX: status must be 'open', not 'active'
+        params = {
+            "limit": 100,
+            "series_ticker": "KXBTCDAILY", 
+            "status": "open"
+        }
         
-        # Extract event ticker from URL
-        event_ticker = kalshi_url.split("/")[-1].upper()
+        response = requests.get(KALSHI_API_URL, params=params)
         
-        # Fetch Current BTC Price
-        current_price, err = get_binance_current_price()
+        # Fallback: If KXBTCDAILY fails (400/404) or is empty, try broader KXBTC
+        if response.status_code != 200 or not response.json().get("markets"):
+            print("   (Debug) KXBTCDAILY empty or invalid. Retrying with KXBTC...")
+            params["series_ticker"] = "KXBTC"
+            response = requests.get(KALSHI_API_URL, params=params)
+            response.raise_for_status()
+
+        data = response.json()
+        all_markets = data.get("markets", [])
         
-        # Fetch Kalshi Markets
-        markets, err = get_kalshi_markets(event_ticker)
-        if err:
-            return None, f"Kalshi Error: {err}"
+        if not all_markets:
+            return None, "No active Kalshi markets found (Market might be closed/settled)."
+
+        # 2. Filter for 'Daily Close' and Today's Expiration
+        # Some KXBTC markets are "High at 9AM", we want "Daily Close" (usually 4PM ET)
+        # We assume the user wants the standard daily market.
+        
+        # Filter: Title must usually contain "Bitcoin"
+        # Sort by close_time (soonest first)
+        all_markets.sort(key=lambda x: x.get("close_time", "9999"))
+        
+        # Identify the soonest close time (Today's Close)
+        target_close_time = all_markets[0].get("close_time")
+        
+        # Keep only markets expiring then
+        todays_markets = [m for m in all_markets if m.get("close_time") == target_close_time]
+        
+        if not todays_markets:
+            return None, "Found markets but filtering failed."
+
+        # 3. Parse Data
+        clean_markets = []
+        for m in todays_markets:
+            # We want simple price range markets.
+            # Filter out complex types if necessary.
             
-        if not markets:
-            return [], None
+            # Strike Parsing
+            strike = m.get('floor_strike')
+            if not strike:
+                # Subtitle fallback: "Bitcoin above $95,000"
+                sub = m.get('subtitle', '')
+                match = re.search(r'\$?([\d,]+)', sub)
+                if match:
+                    strike = float(match.group(1).replace(',', ''))
             
-        # Parse strikes and sort
-        market_data = []
-        for m in markets:
-            strike = parse_strike(m.get('subtitle', ''))
-            if strike > 0:
-                market_data.append({
-                    'strike': strike,
-                    'yes_bid': m.get('yes_bid', 0),
-                    'yes_ask': m.get('yes_ask', 0),
-                    'no_bid': m.get('no_bid', 0),
-                    'no_ask': m.get('no_ask', 0),
+            if strike:
+                clean_markets.append({
+                    'strike': float(strike),
+                    'yes_ask': m.get('yes_ask', 0), # Cents
+                    'no_ask': m.get('no_ask', 0),   # Cents
+                    'ticker': m.get('ticker'),
                     'subtitle': m.get('subtitle')
                 })
-                
-        # Sort by strike price
-        market_data.sort(key=lambda x: x['strike'])
+
+        # Sort by Strike
+        clean_markets.sort(key=lambda x: x['strike'])
+        
+        # Get Current BTC
+        current_btc = get_binance_price()
         
         return {
-            "event_ticker": event_ticker,
-            "current_price": current_price,
-            "markets": market_data
+            "markets": clean_markets,
+            "current_price": current_btc,
+            "event_ticker": "KXBTCDAILY (Dynamic)"
         }, None
-        
-    except Exception as e:
-        return None, str(e)
 
-def main():
+    except Exception as e:
+        return None, f"Kalshi API Error: {str(e)}"
+
+# --- Test Block ---
+if __name__ == "__main__":
+    print("Fetching Dynamic Kalshi Data...")
     data, err = fetch_kalshi_data_struct()
     
     if err:
         print(f"Error: {err}")
-        return
+    else:
+        print(f"Current BTC: ${data['current_price']:,.2f}")
+        print(f"Found {len(data['markets'])} Markets expiring soonest.")
         
-    print(f"Fetching data for Event: {data['event_ticker']}")
-    if data['current_price']:
-        print(f"CURRENT PRICE: ${data['current_price']:,.2f}")
-    
-    market_data = data['markets']
-    if not market_data:
-        print("No markets found.")
-        return
-
-    # Find the market closest to current price for display
-    current_price = data['current_price'] or 0
-    closest_idx = 0
-    min_diff = float('inf')
-    
-    for i, m in enumerate(market_data):
-        diff = abs(m['strike'] - current_price)
-        if diff < min_diff:
-            min_diff = diff
-            closest_idx = i
-            
-    # Select 3 markets
-    start_idx = max(0, closest_idx - 1)
-    end_idx = min(len(market_data), start_idx + 3)
-    
-    if end_idx - start_idx < 3 and start_idx > 0:
-        start_idx = max(0, end_idx - 3)
-        
-    selected_markets = market_data[start_idx:end_idx]
-    
-    # Print Data
-    print("-" * 30)
-    for i, m in enumerate(selected_markets):
-        print(f"PRICE TO BEAT {i+1}: {m['subtitle']}")
-        print(f"BUY YES PRICE {i+1}: {m['yes_ask']}c, BUY NO PRICE {i+1}: {m['no_ask']}c")
-        print()
-
-if __name__ == "__main__":
-    main()
+        # Show sample
+        if len(data['markets']) > 0:
+            m = data['markets'][len(data['markets'])//2]
+            print(f"Sample: Strike ${m['strike']} | Yes {m['yes_ask']}c | No {m['no_ask']}c")
